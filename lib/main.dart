@@ -352,6 +352,7 @@ class MyApp extends StatelessWidget {
               valueListenable: mobileLanguage,
               builder: (context, Locale locale, _) {
                 return MaterialApp(
+                  title: "Glider",
                   navigatorKey: navigatorKey,
                   initialRoute: '/splash',
                   onGenerateRoute: RouteGenerator.generateRoute,
