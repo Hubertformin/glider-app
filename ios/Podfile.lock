@@ -17,11 +17,11 @@ PODS:
   - Firebase/Messaging (7.3.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 7.3.0)
-  - firebase_admob (0.11.0-1):
+  - firebase_admob (0.11.0-2):
     - firebase_core
     - Flutter
     - Google-Mobile-Ads-SDK
-  - firebase_auth (0.20.0-1):
+  - firebase_auth (0.20.1):
     - Firebase/Auth (= 7.3.0)
     - firebase_core
     - Flutter
@@ -31,7 +31,7 @@ PODS:
   - firebase_crashlytics (0.4.0-1):
     - Firebase/Crashlytics (= 7.3.0)
     - firebase_core
-  - firebase_messaging (8.0.0-dev.14):
+  - firebase_messaging (8.0.0-dev.15):
     - Firebase/Messaging (= 7.3.0)
     - firebase_core
     - Flutter
@@ -159,16 +159,10 @@ PODS:
   - path_provider (0.0.1):
     - Flutter
   - PromisesObjC (1.2.12)
-  - razorpay-pod (1.1.11)
-  - razorpay_flutter (1.1.10):
-    - Flutter
-    - razorpay-pod
   - SDWebImage/Core (5.10.2)
   - SDWebImageWebPCoder (0.8.1):
     - libwebp (~> 1.0)
     - SDWebImage/Core (~> 5.10)
-  - shared_preferences (0.0.1):
-    - Flutter
   - sqflite (0.0.2):
     - Flutter
     - FMDB (>= 2.7.5)
@@ -201,8 +195,6 @@ DEPENDENCIES:
   - image_picker (from `.symlinks/plugins/image_picker/ios`)
   - maps_launcher (from `.symlinks/plugins/maps_launcher/ios`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
-  - razorpay_flutter (from `.symlinks/plugins/razorpay_flutter/ios`)
-  - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
   - sqflite (from `.symlinks/plugins/sqflite/ios`)
   - stripe_payment (from `.symlinks/plugins/stripe_payment/ios`)
   - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
@@ -231,7 +223,6 @@ SPEC REPOS:
     - Mantle
     - nanopb
     - PromisesObjC
-    - razorpay-pod
     - SDWebImage
     - SDWebImageWebPCoder
     - Stripe
@@ -271,10 +262,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/maps_launcher/ios"
   path_provider:
     :path: ".symlinks/plugins/path_provider/ios"
-  razorpay_flutter:
-    :path: ".symlinks/plugins/razorpay_flutter/ios"
-  shared_preferences:
-    :path: ".symlinks/plugins/shared_preferences/ios"
   sqflite:
     :path: ".symlinks/plugins/sqflite/ios"
   stripe_payment:
@@ -287,11 +274,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   credit_card_input_form: c849da5e6fc6ebf157d84b06077f54d6aa12fae5
   Firebase: 26223c695fe322633274198cb19dca8cb7e54416
-  firebase_admob: 51c3b41eac429d09237eba8add1a3886942e8006
-  firebase_auth: b55e5136528dced982022ee073ed4b48f15c055c
+  firebase_admob: 95df5c81107409d7fd7133e5f8d11bd25a116a65
+  firebase_auth: 7220e26fc14a501a63093edc10443de6bca0d7e8
   firebase_core: 91b27774a52f41f8b58484a75edf71197ac01c59
   firebase_crashlytics: e6ecb908f6249ce3757d18a812819a41495bf1cb
-  firebase_messaging: d039d8279704fc1e3d05e0a2bb2ce7dc29ee6be8
+  firebase_messaging: caf0273c76e54f0a10dfe5048ac47b89e75bb78a
   FirebaseAnalytics: 2580c2d62535ae7b644143d48941fcc239ea897a
   FirebaseAuth: c224a0cf1afa0949bd5c7bfcf154b4f5ce8ddef2
   FirebaseCore: 4d3c72622ce0e2106aaa07bb4b2935ba2c370972
@@ -302,7 +289,7 @@ SPEC CHECKSUMS:
   FirebaseMessaging: 68d1bcb14880189558a8ae57167abe0b7e417232
   Flurry-iOS-SDK: 6636d30c30f12010e7c7c71d84b443416a168efc
   flurry_event: e6bf9b05179935ef03530b7dc5777d7fc06af7e8
-  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
   flutter_image_compress: 082f8daaf6c1b0c9fe798251c750ef0ecd98d7ae
   flutter_inappwebview: 69dfbac46157b336ffbec19ca6dfd4638c7bf189
   flutter_local_notifications: 0c0b1ae97e741e1521e4c1629a459d04b9aec743
@@ -323,17 +310,14 @@ SPEC CHECKSUMS:
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
-  razorpay-pod: 968635ba3bed4572f5ea9fe72be705225dcbce48
-  razorpay_flutter: 84b3bfd206ae9c9c2a9ba585524a1b3d8102b6c1
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   SDWebImageWebPCoder: fac2821bf5a6642a73979d0962dbed5eac45a605
-  shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
   sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
   Stripe: 92f1c73a9dbd3c54277ed06a1fea6e08f20414c6
   stripe_payment: 1cbe9c339c21b5ecf01035e80eea351067c67c56
   url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
   webview_flutter: d2b4d6c66968ad042ad94cbb791f5b72b4678a96
 
-PODFILE CHECKSUM: 513d64e8bcd8b3eb53d2584447432adddabd8af7
+PODFILE CHECKSUM: a51dedde908013de25de4dd6490305e0ad574d8b
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
