@@ -1,0 +1,115 @@
+{
+  "project_info": {
+    "project_number": "66180639838",
+    "firebase_url": "https://rentors.firebaseio.com",
+    "project_id": "rentors",
+    "storage_bucket": "rentors.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66180639838:android:c6a069f375898acbcc18cf",
+        "android_client_info": {
+          "package_name": "com.applatus.rentors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66180639838-2u6q8s5mgtmfo1qi6u5u6a91of3dhp77.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.applatus.rentors",
+            "certificate_hash": "41b9ac7d44a5de6459c510a967fbe43f22728101"
+          }
+        },
+        {
+          "client_id": "66180639838-bek5031c9r002r5r75l0lfajtaeo784h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.applatus.rentors",
+            "certificate_hash": "dd2a46fb242a588003d099907bc60e9cf1c2ebdd"
+          }
+        },
+        {
+          "client_id": "66180639838-tvkvlg4arpd3ob9iikioipdrtr54qp32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa1_vse5StKOG4LSHZy1Lt1TShvoAY7ZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66180639838-tvkvlg4arpd3ob9iikioipdrtr54qp32.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "66180639838-nu3d95dr0b5qhh7maaj2i7v6reiqhsn7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rentors"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66180639838:android:2e2aa8ecc1b5d14dcc18cf",
+        "android_client_info": {
+          "package_name": "com.rentors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66180639838-0og65alffcri662c70f8i2v9aqqavq0d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rentors",
+            "certificate_hash": "41b9ac7d44a5de6459c510a967fbe43f22728101"
+          }
+        },
+        {
+          "client_id": "66180639838-jqctu4udk67r71eac03v9es0dfli3fr5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rentors",
+            "certificate_hash": "dd2a46fb242a588003d099907bc60e9cf1c2ebdd"
+          }
+        },
+        {
+          "client_id": "66180639838-tvkvlg4arpd3ob9iikioipdrtr54qp32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa1_vse5StKOG4LSHZy1Lt1TShvoAY7ZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66180639838-tvkvlg4arpd3ob9iikioipdrtr54qp32.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "66180639838-nu3d95dr0b5qhh7maaj2i7v6reiqhsn7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rentors"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
