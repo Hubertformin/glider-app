@@ -8,22 +8,22 @@ import 'package:flutterwave/core/flutterwave.dart';
 import 'package:flutterwave/models/responses/charge_response.dart';
 import 'package:flutterwave/utils/flutterwave_constants.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
-import 'package:rentors/bloc/PaymentBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/event/FeatureSubscriptionEvent.dart';
-import 'package:rentors/event/PaymentEvent.dart';
-import 'package:rentors/event/UserSubscriptionEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/FeatureSubscriptionList.dart';
-import 'package:rentors/screen/payment/SelectPaymentMethodScreen.dart'
+import 'package:glider/bloc/PaymentBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/event/FeatureSubscriptionEvent.dart';
+import 'package:glider/event/PaymentEvent.dart';
+import 'package:glider/event/UserSubscriptionEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/FeatureSubscriptionList.dart';
+import 'package:glider/screen/payment/SelectPaymentMethodScreen.dart'
     as payment;
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/ErrorState.dart';
-import 'package:rentors/state/GatewayPaymentState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/util/CommonConstant.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/ProgressDialog.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/ErrorState.dart';
+import 'package:glider/state/GatewayPaymentState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/util/CommonConstant.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/ProgressDialog.dart';
 import 'package:stripe_payment/stripe_payment.dart';
 
 class PaymentScreen extends StatefulWidget {
@@ -164,7 +164,7 @@ class PaymentScreenState extends State<PaymentScreen> {
       'key': CommonConstant.RAZOR_PAY_KEY,
       'amount': int.parse(widget.feature.price) * 100,
       'currency': "INR",
-      'name': "Rentors",
+      'name': "glider",
       'payment_capture': true,
       'description': 'Order for product' + widget.feature.title,
       'prefill': {'contact': '', 'email': user.data.email},

@@ -1,5 +1,5 @@
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/model/DropDownItem.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/model/DropDownItem.dart';
 
 class ChangeSubCategory extends BaseEvent {
   final DropDownItem category;

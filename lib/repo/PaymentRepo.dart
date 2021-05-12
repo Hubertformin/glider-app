@@ -1,7 +1,7 @@
-import 'package:rentors/model/Response.dart';
-import 'package:rentors/model/StripPaymentSecret.dart';
-import 'package:rentors/repo/FreshDio.dart' as dio;
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/model/Response.dart';
+import 'package:glider/model/StripPaymentSecret.dart';
+import 'package:glider/repo/FreshDio.dart' as dio;
+import 'package:glider/util/Utils.dart';
 
 Future<StripPaymentSecret> getStripePaymentSecret(
     String packageId, String note) async {
@@ -14,7 +14,7 @@ Future<StripPaymentSecret> getStripePaymentSecret(
   return StripPaymentSecret.fromJson(response.data);
 }
 
-Future<Response> subscribeFeatureRentor(
+Future<Response> subscribeFeatureGlider(
     String productId, String subscriptionid, String msg) async {
   var body = Map();
   var user = await Utils.getUser();

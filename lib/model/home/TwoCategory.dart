@@ -1,4 +1,4 @@
-import 'package:rentors/model/home/HomeModel.dart';
+import 'package:glider/model/home/HomeModel.dart';
 
 class TwoCategoryCategory {
   Category category;

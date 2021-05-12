@@ -7,10 +7,10 @@ import 'package:date_format/date_format.dart' as dateformat;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/UserModel.dart';
-import 'package:rentors/model/home/HomeModel.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/UserModel.dart';
+import 'package:glider/model/home/HomeModel.dart';
 
 class Utils {
   static Rect getWidgetGlobalRect(GlobalKey key) {

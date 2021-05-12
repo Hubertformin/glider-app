@@ -1,5 +1,5 @@
-import 'package:rentors/model/category/CategoryDetailModel.dart';
-import 'package:rentors/model/home/HomeBean.dart';
+import 'package:glider/model/category/CategoryDetailModel.dart';
+import 'package:glider/model/home/HomeBean.dart';
 
 class ConsolidateCategoryDetail {
   List<SubCategory> subCategory;

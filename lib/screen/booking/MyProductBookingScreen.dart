@@ -2,15 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
-import 'package:rentors/bloc/BookingBloc.dart';
-import 'package:rentors/event/MyProductBookingEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/booking/MyProductBookingModel.dart';
-import 'package:rentors/model/home/HomeModel.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/MyProductBookingState.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/ProgressIndicatorWidget.dart';
+import 'package:glider/bloc/BookingBloc.dart';
+import 'package:glider/event/MyProductBookingEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/booking/MyProductBookingModel.dart';
+import 'package:glider/model/home/HomeModel.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/MyProductBookingState.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/ProgressIndicatorWidget.dart';
 
 class MyProductBookingScreen extends StatefulWidget {
   @override

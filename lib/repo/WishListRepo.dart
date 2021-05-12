@@ -1,8 +1,8 @@
-import 'package:rentors/model/Response.dart';
-import 'package:rentors/model/UserModel.dart';
-import 'package:rentors/model/wishlist/WishList.dart';
-import 'package:rentors/repo/FreshDio.dart' as dio;
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/model/Response.dart';
+import 'package:glider/model/UserModel.dart';
+import 'package:glider/model/wishlist/WishList.dart';
+import 'package:glider/repo/FreshDio.dart' as dio;
+import 'package:glider/util/Utils.dart';
 
 Future<WishList> getWishList() async {
   UserModel model = await Utils.getUser();

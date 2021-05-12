@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart' as mat;
 import 'package:flutter/material.dart';
-import 'package:rentors/HexColor.dart';
+import 'package:glider/HexColor.dart';
 
 class App {
   mat.BuildContext _context;

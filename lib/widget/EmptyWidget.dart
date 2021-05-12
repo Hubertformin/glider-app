@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/generated/l10n.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/generated/l10n.dart';
 
 class EmptyWidget extends StatefulWidget {
   EmptyWidget();

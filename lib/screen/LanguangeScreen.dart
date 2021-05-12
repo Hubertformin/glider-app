@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rentors/dynamic_theme/dynamic_theme.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/util/Settings.dart';
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/dynamic_theme/dynamic_theme.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/util/Settings.dart';
+import 'package:glider/util/Utils.dart';
 
 class LanguangeScreen extends StatefulWidget {
   @override

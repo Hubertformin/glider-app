@@ -1,6 +1,6 @@
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/model/AddProductModel.dart';
-import 'package:rentors/model/MyProductModel.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/model/AddProductModel.dart';
+import 'package:glider/model/MyProductModel.dart';
 
 class AddProductEvent extends BaseEvent {
   final AddProductModel body;

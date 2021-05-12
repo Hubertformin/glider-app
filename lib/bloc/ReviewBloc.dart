@@ -1,11 +1,11 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/AddReviewEvent.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/RequestReviewEvent.dart';
-import 'package:rentors/repo/ReviewRepo.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/OtpState.dart';
+import 'package:glider/event/AddReviewEvent.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/RequestReviewEvent.dart';
+import 'package:glider/repo/ReviewRepo.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/OtpState.dart';
 
 class ReviewBloc extends Bloc<BaseEvent, BaseState> {
   @override
@@ -21,8 +21,7 @@ class ReviewBloc extends Bloc<BaseEvent, BaseState> {
       yield DoneState(response);
     } else if (event is RequestReviewEvent) {
       yield ProgressDialogState();
-      var response =
-          await requestReview(event.receiverUserId, event.productId);
+      var response = await requestReview(event.receiverUserId, event.productId);
       yield DoneState(response);
     }
   }

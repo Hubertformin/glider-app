@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import 'package:rentors/model/UserModel.dart';
-import 'package:rentors/repo/LoginRepo.dart';
-import 'package:rentors/util/CommonConstant.dart';
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/model/UserModel.dart';
+import 'package:glider/repo/LoginRepo.dart';
+import 'package:glider/util/CommonConstant.dart';
+import 'package:glider/util/Utils.dart';
 
 BaseOptions options = new BaseOptions(
   baseUrl: CommonConstant.baseURL,

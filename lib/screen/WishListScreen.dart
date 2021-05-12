@@ -3,24 +3,24 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
-import 'package:rentors/bloc/WishListBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/core/InheritedStateContainer.dart';
-import 'package:rentors/core/RentorState.dart';
-import 'package:rentors/event/WishListEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/wishlist/WishList.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/ErrorState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/state/WishListState.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/EmptyWidget.dart';
-import 'package:rentors/widget/FeatureWidget.dart';
-import 'package:rentors/widget/LikeWidget.dart';
-import 'package:rentors/widget/NetworkErrorWidget.dart';
-import 'package:rentors/widget/PlaceHolderWidget.dart';
-import 'package:rentors/widget/ProgressIndicatorWidget.dart';
+import 'package:glider/bloc/WishListBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/core/InheritedStateContainer.dart';
+import 'package:glider/core/glidertate.dart';
+import 'package:glider/event/WishListEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/wishlist/WishList.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/ErrorState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/state/WishListState.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/EmptyWidget.dart';
+import 'package:glider/widget/FeatureWidget.dart';
+import 'package:glider/widget/LikeWidget.dart';
+import 'package:glider/widget/NetworkErrorWidget.dart';
+import 'package:glider/widget/PlaceHolderWidget.dart';
+import 'package:glider/widget/ProgressIndicatorWidget.dart';
 
 class WishListScreen extends StatefulWidget {
   @override
@@ -29,7 +29,7 @@ class WishListScreen extends StatefulWidget {
   }
 }
 
-class WishListScreenState extends RentorState<WishListScreen> {
+class WishListScreenState extends glidertate<WishListScreen> {
   WishListBloc mBloc;
 
   WishList data;

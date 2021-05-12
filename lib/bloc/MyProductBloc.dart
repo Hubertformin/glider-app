@@ -1,13 +1,13 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/ChangeProductStatusEvent.dart';
-import 'package:rentors/event/DeleteProductEvent.dart';
-import 'package:rentors/event/GetMyProductEvent.dart';
-import 'package:rentors/repo/MyProductRepo.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/MyProductState.dart';
-import 'package:rentors/state/OtpState.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/ChangeProductStatusEvent.dart';
+import 'package:glider/event/DeleteProductEvent.dart';
+import 'package:glider/event/GetMyProductEvent.dart';
+import 'package:glider/repo/MyProductRepo.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/MyProductState.dart';
+import 'package:glider/state/OtpState.dart';
 
 class MyProductBloc extends Bloc<BaseEvent, BaseState> {
   @override

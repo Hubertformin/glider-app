@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/ErrorResponse.dart';
-import 'package:rentors/model/OtpResponse.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/ErrorResponse.dart';
+import 'package:glider/model/OtpResponse.dart';
 
 Future<dynamic> sendOTP(countryCode, mobileNumber) async {
   Completer<dynamic> completer = Completer();
@@ -34,13 +34,13 @@ Future<dynamic> verifyOTP(verificationId, smsCode) async {
   var _authCredential = PhoneAuthProvider.credential(
       verificationId: verificationId, smsCode: smsCode);
   await _auth.signInWithCredential(_authCredential).catchError((error) {
-    if(error is FirebaseAuthException) {
-      if(error.code=="invalid-verification-code") {
+    if (error is FirebaseAuthException) {
+      if (error.code == "invalid-verification-code") {
         completer.complete(ErrorResponse(101, S.current.invalidOtp));
-      }else{
+      } else {
         completer.complete(ErrorResponse(101, error.toString()));
       }
-    }else{
+    } else {
       completer.complete(ErrorResponse(101, error.toString()));
     }
   }).then((value) async {

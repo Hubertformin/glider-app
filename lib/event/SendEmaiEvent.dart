@@ -1,4 +1,4 @@
-import 'package:rentors/event/BaseEvent.dart';
+import 'package:glider/event/BaseEvent.dart';
 
 class SendEmaiEvent extends BaseEvent {
   final String msg;

@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
-import 'package:rentors/bloc/CategoryListBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/event/SubCategoryDetailEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/category/CategoryDetailModel.dart' as category;
-import 'package:rentors/model/home/HomeModel.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/SubCategoryDetailState.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/PlaceHolderWidget.dart';
-import 'package:rentors/widget/ProductViewWidget.dart';
-import 'package:rentors/widget/ProgressIndicatorWidget.dart';
+import 'package:glider/bloc/CategoryListBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/event/SubCategoryDetailEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/category/CategoryDetailModel.dart' as category;
+import 'package:glider/model/home/HomeModel.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/SubCategoryDetailState.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/PlaceHolderWidget.dart';
+import 'package:glider/widget/ProductViewWidget.dart';
+import 'package:glider/widget/ProgressIndicatorWidget.dart';
 
 class SubcategoryDetailScreen extends StatefulWidget {
   final category.SubCategory subCategory;
@@ -56,7 +56,7 @@ class SubcategoryDetailScreenState extends State<SubcategoryDetailScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(top: 10, left: 10,right: 10),
+                    margin: EdgeInsets.only(top: 10, left: 10, right: 10),
                     child: Text(
                       S.of(context).recommendedForYou,
                       style: TextStyle(
@@ -192,7 +192,7 @@ class SubcategoryDetailScreenState extends State<SubcategoryDetailScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(top: 10, left: 10,right: 10),
+                    margin: EdgeInsets.only(top: 10, left: 10, right: 10),
                     child: Text(
                       S.of(context).nearYou,
                       style: TextStyle(

@@ -1,16 +1,16 @@
 import 'dart:convert';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/UpdateUserDetailEvent.dart';
-import 'package:rentors/event/UserDetailEvent.dart';
-import 'package:rentors/model/UserModel.dart';
-import 'package:rentors/repo/UserRepo.dart' as product;
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/state/UserDetailState.dart';
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/UpdateUserDetailEvent.dart';
+import 'package:glider/event/UserDetailEvent.dart';
+import 'package:glider/model/UserModel.dart';
+import 'package:glider/repo/UserRepo.dart' as product;
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/state/UserDetailState.dart';
+import 'package:glider/util/Utils.dart';
 
 class UserDetailBloc extends Bloc<BaseEvent, BaseState> {
   @override

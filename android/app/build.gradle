@@ -39,7 +39,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.applatus.rentors"
+        applicationId "com.applatus.glider"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
@@ -49,9 +49,9 @@ android {
     signingConfigs {
 
         release {
-            storeFile file("../app/Rentor.keystore")
+            storeFile file("../app/Glider.keystore")
             storePassword "android"
-            keyAlias "rentor"
+            keyAlias "Glider"
             keyPassword "android"
         }
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rentors/event/BaseEvent.dart';
+import 'package:glider/event/BaseEvent.dart';
 
 @immutable
 class SendOTPEvent extends BaseEvent {

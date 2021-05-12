@@ -1,7 +1,6 @@
-
-import 'package:rentors/model/AddProductModel.dart';
-import 'package:rentors/model/Response.dart' as res;
-import 'package:rentors/repo/FreshDio.dart' as dio;
+import 'package:glider/model/AddProductModel.dart';
+import 'package:glider/model/Response.dart' as res;
+import 'package:glider/repo/FreshDio.dart' as dio;
 
 Future<res.Response> addProduct(AddProductModel productModel) async {
   var response = await dio

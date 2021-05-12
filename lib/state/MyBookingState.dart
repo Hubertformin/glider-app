@@ -1,5 +1,5 @@
-import 'package:rentors/model/booking/MyBooking.dart';
-import 'package:rentors/state/BaseState.dart';
+import 'package:glider/model/booking/MyBooking.dart';
+import 'package:glider/state/BaseState.dart';
 
 class MyBookingState extends BaseState {
   final MyBooking booking;

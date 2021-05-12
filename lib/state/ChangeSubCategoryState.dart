@@ -1,5 +1,5 @@
-import 'package:rentors/model/DropDownItem.dart';
-import 'package:rentors/state/BaseState.dart';
+import 'package:glider/model/DropDownItem.dart';
+import 'package:glider/state/BaseState.dart';
 
 class ChangeSubCategoryState extends BaseState {
   final DropDownItem category;

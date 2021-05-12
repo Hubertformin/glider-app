@@ -1,14 +1,14 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/FeatureSubscriptionEvent.dart';
-import 'package:rentors/event/PaymentEvent.dart';
-import 'package:rentors/event/UserSubscriptionEvent.dart';
-import 'package:rentors/repo/PaymentRepo.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/ErrorState.dart';
-import 'package:rentors/state/GatewayPaymentState.dart';
-import 'package:rentors/state/OtpState.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/FeatureSubscriptionEvent.dart';
+import 'package:glider/event/PaymentEvent.dart';
+import 'package:glider/event/UserSubscriptionEvent.dart';
+import 'package:glider/repo/PaymentRepo.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/ErrorState.dart';
+import 'package:glider/state/GatewayPaymentState.dart';
+import 'package:glider/state/OtpState.dart';
 import 'package:stripe_payment/stripe_payment.dart';
 
 class PaymentBloc extends Bloc<BaseEvent, BaseState> {
@@ -42,13 +42,12 @@ class PaymentBloc extends Bloc<BaseEvent, BaseState> {
       }
     } else if (event is FeatureSubscriptionEvent) {
       yield ProgressDialogState();
-      var res = await subscribeFeatureRentor(
+      var res = await subscribeFeatureGlider(
           event.productId, event.subscriptionid, event.details);
       yield DoneState(res);
-    }else if (event is UserSubscriptionEvent) {
+    } else if (event is UserSubscriptionEvent) {
       yield ProgressDialogState();
-      var res = await subscribeUser(
-          event.subscriptionid, event.details);
+      var res = await subscribeUser(event.subscriptionid, event.details);
       yield DoneState(res);
     }
   }

@@ -1,15 +1,15 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/ForgotPasswordEvent.dart';
-import 'package:rentors/event/SendEmaiEvent.dart';
-import 'package:rentors/event/SignWithEmailEvent.dart';
-import 'package:rentors/event/SignupEvent.dart';
-import 'package:rentors/repo/LoginRepo.dart' as homeRepo;
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/EmailSentState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/state/SignInWithEmailState.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/ForgotPasswordEvent.dart';
+import 'package:glider/event/SendEmaiEvent.dart';
+import 'package:glider/event/SignWithEmailEvent.dart';
+import 'package:glider/event/SignupEvent.dart';
+import 'package:glider/repo/LoginRepo.dart' as homeRepo;
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/EmailSentState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/state/SignInWithEmailState.dart';
 
 class LoginBloc extends Bloc<BaseEvent, BaseState> {
   @override

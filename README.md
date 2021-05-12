@@ -1,4 +1,4 @@
-# rentors
+# Glider
 
 A new Flutter application.
 

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:rentors/model/home/HomeModel.dart';
+import 'package:glider/model/home/HomeModel.dart';
 
 class MyProductModel {
   MyProductModel({

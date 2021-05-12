@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:rentors/bloc/UploadPhotoBloc.dart';
-import 'package:rentors/core/RentorState.dart';
-import 'package:rentors/event/UploadPhotoEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/state/UploadPhotoDoneState.dart';
-import 'package:rentors/util/TypeEnum.dart';
-import 'package:rentors/widget/ProgressDialog.dart';
+import 'package:glider/bloc/UploadPhotoBloc.dart';
+import 'package:glider/core/glidertate.dart';
+import 'package:glider/event/UploadPhotoEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/state/UploadPhotoDoneState.dart';
+import 'package:glider/util/TypeEnum.dart';
+import 'package:glider/widget/ProgressDialog.dart';
 
 class UploadPhotoWidget extends StatefulWidget {
   final String name;
@@ -41,7 +41,7 @@ class UploadPhotoWidgetState extends State<UploadPhotoWidget> {
           dialog.hide();
         }
         widget.imageSelectionCallback(state.home.url, state.typeEnum);
-        RentorState.of(context)?.updateView(state.home.url);
+        glidertate.of(context)?.updateView(state.home.url);
       } else if (state is ProgressDialogState) {
         dialog = ProgressDialog(context, isDismissible: true);
         dialog.style(message: S.of(context).uploading);

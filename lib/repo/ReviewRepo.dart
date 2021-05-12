@@ -1,6 +1,6 @@
-import 'package:rentors/model/Response.dart';
-import 'package:rentors/repo/FreshDio.dart' as dio;
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/model/Response.dart';
+import 'package:glider/repo/FreshDio.dart' as dio;
+import 'package:glider/util/Utils.dart';
 
 Future<Response> addReview(
     String productId, double rating, String comment) async {

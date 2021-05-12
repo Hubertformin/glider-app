@@ -1,5 +1,5 @@
-import 'package:rentors/model/CityModel.dart';
-import 'package:rentors/state/BaseState.dart';
+import 'package:glider/model/CityModel.dart';
+import 'package:glider/state/BaseState.dart';
 
 class CityState extends BaseState {
   final CityModel home;

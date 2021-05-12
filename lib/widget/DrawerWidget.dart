@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/UserModel.dart';
-import 'package:rentors/repo/LoginRepo.dart';
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/UserModel.dart';
+import 'package:glider/repo/LoginRepo.dart';
+import 'package:glider/util/Utils.dart';
 
 class DrawerWidget extends StatefulWidget {
   @override

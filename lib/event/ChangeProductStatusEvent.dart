@@ -1,4 +1,4 @@
-import 'package:rentors/event/BaseEvent.dart';
+import 'package:glider/event/BaseEvent.dart';
 
 class ChangeProductStatusEvent extends BaseEvent {
   final String status;

@@ -1,11 +1,11 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/WishListEvent.dart';
-import 'package:rentors/repo/WishListRepo.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/ErrorState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/state/WishListState.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/WishListEvent.dart';
+import 'package:glider/repo/WishListRepo.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/ErrorState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/state/WishListState.dart';
 
 class WishListBloc extends Bloc<BaseEvent, BaseState> {
   @override

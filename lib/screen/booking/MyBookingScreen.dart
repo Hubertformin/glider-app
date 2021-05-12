@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
-import 'package:rentors/bloc/BookingBloc.dart';
-import 'package:rentors/bloc/ReviewBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/event/AddReviewEvent.dart';
-import 'package:rentors/event/MyBookingEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/booking/MyBooking.dart';
-import 'package:rentors/model/home/HomeModel.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/MyBookingState.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/ProgressIndicatorWidget.dart';
-import 'package:rentors/widget/RentorRaisedButton.dart';
+import 'package:glider/bloc/BookingBloc.dart';
+import 'package:glider/bloc/ReviewBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/event/AddReviewEvent.dart';
+import 'package:glider/event/MyBookingEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/booking/MyBooking.dart';
+import 'package:glider/model/home/HomeModel.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/MyBookingState.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/ProgressIndicatorWidget.dart';
+import 'package:glider/widget/GliderRaisedButton.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 class MyBookingScreen extends StatefulWidget {
@@ -90,8 +90,8 @@ class MyBookingScreenState extends State<MyBookingScreen>
                               margin: EdgeInsets.only(top: 5),
                               child: Text(
                                 S
-                                    .of(context)
-                                    .dollar(data.productDetails.price) +
+                                        .of(context)
+                                        .dollar(data.productDetails.price) +
                                     "/" +
                                     priceUnitValues
                                         .reverse[data.productDetails.priceUnit],
@@ -143,14 +143,10 @@ class MyBookingScreenState extends State<MyBookingScreen>
                         children: [
                           Container(
                             decoration: BoxDecoration(
-                                color: config
-                                    .Colors()
-                                    .colorF25633,
+                                color: config.Colors().colorF25633,
                                 borderRadius: BorderRadius.circular(5)),
                             child: Text(
-                              S
-                                  .of(context)
-                                  .submitReview,
+                              S.of(context).submitReview,
                               style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w800,
@@ -195,36 +191,22 @@ class MyBookingScreenState extends State<MyBookingScreen>
 
   String status(BuildContext context, String val) {
     if (val == "0") {
-      return S
-          .of(context)
-          .pending;
+      return S.of(context).pending;
     } else if (val == "1") {
-      return S
-          .of(context)
-          .confirmed;
+      return S.of(context).confirmed;
     } else if (val == "2") {
-      return S
-          .of(context)
-          .rejected;
+      return S.of(context).rejected;
     } else if (val == "3") {
-      return S
-          .of(context)
-          .completed;
+      return S.of(context).completed;
     }
-    return S
-        .of(context)
-        .pending;
+    return S.of(context).pending;
   }
 
   Color color(String val) {
     if (val == "1") {
-      return config
-          .Colors()
-          .color1ABE5B;
+      return config.Colors().color1ABE5B;
     } else {
-      return config
-          .Colors()
-          .colorFFA200;
+      return config.Colors().colorFFA200;
     }
   }
 
@@ -244,9 +226,7 @@ class MyBookingScreenState extends State<MyBookingScreen>
                             children: [
                               AppBar(
                                 automaticallyImplyLeading: false,
-                                title: Text(S
-                                    .of(context)
-                                    .review),
+                                title: Text(S.of(context).review),
                               ),
                               Container(
                                 margin: EdgeInsets.all(5),
@@ -256,12 +236,8 @@ class MyBookingScreenState extends State<MyBookingScreen>
                                     rating = value;
                                   },
                                   allowHalfRating: false,
-                                  color: config
-                                      .Colors()
-                                      .orangeColor,
-                                  borderColor: config
-                                      .Colors()
-                                      .orangeColor,
+                                  color: config.Colors().orangeColor,
+                                  borderColor: config.Colors().orangeColor,
                                 ),
                               ),
                               TextField(
@@ -269,58 +245,44 @@ class MyBookingScreenState extends State<MyBookingScreen>
                                   maxLengthEnforced: true,
                                   maxLines: 5,
                                   decoration: InputDecoration(
-                                      hintText: S
-                                          .of(context)
-                                          .writeReview,
+                                      hintText: S.of(context).writeReview,
                                       focusedBorder: OutlineInputBorder(
                                           borderRadius: BorderRadius.zero,
                                           borderSide: BorderSide(
                                               color:
-                                              Theme
-                                                  .of(context)
-                                                  .hintColor)),
+                                                  Theme.of(context).hintColor)),
                                       border: OutlineInputBorder(
                                           borderRadius: BorderRadius.zero,
                                           borderSide: BorderSide(
                                               color:
-                                              Theme
-                                                  .of(context)
-                                                  .hintColor)),
+                                                  Theme.of(context).hintColor)),
                                       labelStyle: TextStyle(
-                                        color: Theme
-                                            .of(context)
-                                            .hintColor,
+                                        color: Theme.of(context).hintColor,
                                       ))),
                               Container(
                                 margin: EdgeInsets.all(5),
                                 child: Row(
                                   mainAxisAlignment:
-                                  MainAxisAlignment.spaceEvenly,
+                                      MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    RentorRaisedButton(
+                                    GliderRaisedButton(
                                       onPressed: () {
                                         Navigator.of(context).pop();
                                       },
                                       child: Text(
-                                        S
-                                            .of(context)
-                                            .cancel,
+                                        S.of(context).cancel,
                                         style: TextStyle(
-                                            color: Theme
-                                                .of(context)
+                                            color: Theme.of(context)
                                                 .scaffoldBackgroundColor),
                                       ),
                                     ),
-                                    RentorRaisedButton(
+                                    GliderRaisedButton(
                                         onPressed: () {
                                           submit(data);
                                         },
-                                        child: Text(S
-                                            .of(context)
-                                            .submit,
+                                        child: Text(S.of(context).submit,
                                             style: TextStyle(
-                                                color: Theme
-                                                    .of(context)
+                                                color: Theme.of(context)
                                                     .scaffoldBackgroundColor)))
                                   ],
                                 ),
@@ -335,9 +297,7 @@ class MyBookingScreenState extends State<MyBookingScreen>
   void submit(Datum data) {
     String value = reviewController.text.trim();
     if (value.isEmpty) {
-      Fluttertoast.showToast(msg: S
-          .of(context)
-          .pleaseAddReview);
+      Fluttertoast.showToast(msg: S.of(context).pleaseAddReview);
     } else {
       Navigator.of(context).pop();
       reviewBloc.add(AddReviewEvent(data.productId, rating, value));

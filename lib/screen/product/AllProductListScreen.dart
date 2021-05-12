@@ -2,20 +2,20 @@ import 'package:optimized_cached_image/optimized_cached_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/bloc/ProductDetailsBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/core/InheritedStateContainer.dart';
-import 'package:rentors/core/RentorState.dart';
-import 'package:rentors/event/AllProductEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/home/HomeModel.dart';
-import 'package:rentors/state/AllProductState.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/LikeWidget.dart';
-import 'package:rentors/widget/PlaceHolderWidget.dart';
-import 'package:rentors/widget/ProgressIndicatorWidget.dart';
+import 'package:glider/bloc/ProductDetailsBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/core/InheritedStateContainer.dart';
+import 'package:glider/core/glidertate.dart';
+import 'package:glider/event/AllProductEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/home/HomeModel.dart';
+import 'package:glider/state/AllProductState.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/LikeWidget.dart';
+import 'package:glider/widget/PlaceHolderWidget.dart';
+import 'package:glider/widget/ProgressIndicatorWidget.dart';
 
 class AllProductListScreen extends StatefulWidget {
   final SubCategory category;
@@ -28,7 +28,7 @@ class AllProductListScreen extends StatefulWidget {
   }
 }
 
-class AllProductListScreenState extends RentorState<AllProductListScreen> {
+class AllProductListScreenState extends glidertate<AllProductListScreen> {
   ProductDetailsBloc mBloc = ProductDetailsBloc();
 
   List<FeaturedProductElement> searchItem = List();

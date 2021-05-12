@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/productdetail/ProductDetailModel.dart';
-import 'package:rentors/widget/CircularImageWidget.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/productdetail/ProductDetailModel.dart';
+import 'package:glider/widget/CircularImageWidget.dart';
 
 class ProductOwnerWidget extends StatefulWidget {
   final ProductDetailModel mModel;

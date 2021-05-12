@@ -1,19 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/bloc/ProductDetailsBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/core/InheritedStateContainer.dart';
-import 'package:rentors/core/RentorState.dart';
-import 'package:rentors/event/ProductDetailsEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/productdetail/ProductDetailModel.dart';
-import 'package:rentors/screen/product/ProductOverViewWidget.dart';
-import 'package:rentors/screen/product/ProductOwnerWidget.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/state/ProductDetailsState.dart';
-import 'package:rentors/widget/CenterHorizontal.dart';
+import 'package:glider/bloc/ProductDetailsBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/core/InheritedStateContainer.dart';
+import 'package:glider/core/glidertate.dart';
+import 'package:glider/event/ProductDetailsEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/productdetail/ProductDetailModel.dart';
+import 'package:glider/screen/product/ProductOverViewWidget.dart';
+import 'package:glider/screen/product/ProductOwnerWidget.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/state/ProductDetailsState.dart';
+import 'package:glider/widget/CenterHorizontal.dart';
 
 class ProductDetailsWidget extends StatefulWidget {
   final String name;
@@ -27,7 +27,7 @@ class ProductDetailsWidget extends StatefulWidget {
   }
 }
 
-class ProductDetailsWidgetState extends RentorState<ProductDetailsWidget> {
+class ProductDetailsWidgetState extends glidertate<ProductDetailsWidget> {
   ProductDetailsBloc mBloc = ProductDetailsBloc();
 
   ProductDetailModel response;

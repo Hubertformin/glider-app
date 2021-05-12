@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
-import 'package:rentors/config/app_config.dart' as config;
+import 'package:glider/config/app_config.dart' as config;
 
 class SubCategoryWidget extends StatelessWidget {
   final Map item;

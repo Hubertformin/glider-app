@@ -1,11 +1,11 @@
-import 'package:rentors/model/category/CategoryDetailModel.dart';
-import 'package:rentors/model/category/CategoryList.dart';
-import 'package:rentors/model/category/ConsolidateCategoryDetail.dart';
-import 'package:rentors/model/category/SubCategoryDetailModel.dart'
+import 'package:glider/model/category/CategoryDetailModel.dart';
+import 'package:glider/model/category/CategoryList.dart';
+import 'package:glider/model/category/ConsolidateCategoryDetail.dart';
+import 'package:glider/model/category/SubCategoryDetailModel.dart'
     as subCategory;
-import 'package:rentors/model/home/HomeBean.dart';
-import 'package:rentors/model/home/Separator.dart';
-import 'package:rentors/repo/FreshDio.dart' as dio;
+import 'package:glider/model/home/HomeBean.dart';
+import 'package:glider/model/home/Separator.dart';
+import 'package:glider/repo/FreshDio.dart' as dio;
 
 Future<CategoryList> getCategoryList() async {
   var response = await dio.httpClient().get("category/");

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rentors/config/app_config.dart' as config;
+import 'package:glider/config/app_config.dart' as config;
 
 class PinEntryTextField extends StatefulWidget {
   final String lastPin;

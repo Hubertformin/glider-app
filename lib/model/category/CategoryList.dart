@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rentors/HexColor.dart';
-import 'package:rentors/model/category/CategoryDetailModel.dart';
+import 'package:glider/HexColor.dart';
+import 'package:glider/model/category/CategoryDetailModel.dart';
 
 class CategoryList {
   CategoryList({

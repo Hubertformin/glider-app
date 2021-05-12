@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
-import 'package:rentors/bloc/CategoryListBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/event/CategoryListEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/category/CategoryList.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/CategoryListState.dart';
-import 'package:rentors/widget/ProgressIndicatorWidget.dart';
+import 'package:glider/bloc/CategoryListBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/event/CategoryListEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/category/CategoryList.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/CategoryListState.dart';
+import 'package:glider/widget/ProgressIndicatorWidget.dart';
 
 class CategoryScreenWidget extends StatefulWidget {
   @override

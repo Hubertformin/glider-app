@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class RentorRaisedButton extends StatelessWidget {
+class GliderRaisedButton extends StatelessWidget {
   final Widget child;
 
   @required
   final VoidCallback onPressed;
 
-  RentorRaisedButton({this.child, this.onPressed});
+  GliderRaisedButton({this.child, this.onPressed});
 
   @override
   Widget build(BuildContext context) {

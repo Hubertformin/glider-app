@@ -1,10 +1,10 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/FeatureSubscriptionListEvent.dart';
-import 'package:rentors/repo/SubscriptionRepo.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/FeatureSubcriptionListState.dart';
-import 'package:rentors/state/OtpState.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/FeatureSubscriptionListEvent.dart';
+import 'package:glider/repo/SubscriptionRepo.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/FeatureSubcriptionListState.dart';
+import 'package:glider/state/OtpState.dart';
 
 class FeatureBloc extends Bloc<BaseEvent, BaseState> {
   @override

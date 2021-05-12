@@ -1,4 +1,4 @@
-import 'package:rentors/model/Response.dart';
+import 'package:glider/model/Response.dart';
 
 class UserModel extends Response {
   UserModel({

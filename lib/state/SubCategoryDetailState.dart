@@ -1,5 +1,5 @@
-import 'package:rentors/model/category/SubCategoryDetailModel.dart';
-import 'package:rentors/state/BaseState.dart';
+import 'package:glider/model/category/SubCategoryDetailModel.dart';
+import 'package:glider/state/BaseState.dart';
 
 class SubCategoryDetailState extends BaseState {
   final SubCategoryDetailModel categoryList;

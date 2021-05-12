@@ -1,5 +1,5 @@
-import 'package:rentors/model/home/HomeBean.dart';
-import 'package:rentors/model/home/HomeModel.dart';
+import 'package:glider/model/home/HomeBean.dart';
+import 'package:glider/model/home/HomeModel.dart';
 
 class CategoryDetailModel {
   CategoryDetailModel({

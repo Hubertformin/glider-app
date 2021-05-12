@@ -2,9 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/widget/RentorRaisedButton.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/widget/GliderRaisedButton.dart';
 
 class StartRentingItemWidget extends StatelessWidget {
   StartRentingItemWidget();
@@ -42,7 +42,7 @@ class StartRentingItemWidget extends StatelessWidget {
                       Container(
                           width: double.infinity,
                           margin: EdgeInsets.only(top: 5),
-                          child: RentorRaisedButton(
+                          child: GliderRaisedButton(
                             onPressed: () {
                               Navigator.of(context)
                                   .pushNamed("/create_product");

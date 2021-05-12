@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/util/Utils.dart';
 
 class SplashScreenWidget extends StatelessWidget {
   checkLogin(BuildContext context) async {

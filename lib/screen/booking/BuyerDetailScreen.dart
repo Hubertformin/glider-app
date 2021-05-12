@@ -5,17 +5,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
-import 'package:rentors/bloc/BookingBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/event/BookingStatusEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/booking/MyBooking.dart';
-import 'package:rentors/model/home/HomeModel.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/CircularImageWidget.dart';
-import 'package:rentors/widget/ProgressDialog.dart';
+import 'package:glider/bloc/BookingBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/event/BookingStatusEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/booking/MyBooking.dart';
+import 'package:glider/model/home/HomeModel.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/CircularImageWidget.dart';
+import 'package:glider/widget/ProgressDialog.dart';
 
 class BuyerDetailScreen extends StatefulWidget {
   final Datum data;

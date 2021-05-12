@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/generated/l10n.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/generated/l10n.dart';
 
 class PasswordField extends StatefulWidget {
   const PasswordField({

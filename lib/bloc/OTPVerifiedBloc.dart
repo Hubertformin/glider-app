@@ -1,16 +1,16 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/SendOTPEvent.dart';
-import 'package:rentors/event/SignWithMobileEvent.dart';
-import 'package:rentors/event/VerifyOTPEvent.dart';
-import 'package:rentors/model/ErrorResponse.dart';
-import 'package:rentors/model/OtpResponse.dart';
-import 'package:rentors/repo/LoginRepo.dart';
-import 'package:rentors/repo/OTPRepositry.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/ErrorState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/state/SignInWithMobileState.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/SendOTPEvent.dart';
+import 'package:glider/event/SignWithMobileEvent.dart';
+import 'package:glider/event/VerifyOTPEvent.dart';
+import 'package:glider/model/ErrorResponse.dart';
+import 'package:glider/model/OtpResponse.dart';
+import 'package:glider/repo/LoginRepo.dart';
+import 'package:glider/repo/OTPRepositry.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/ErrorState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/state/SignInWithMobileState.dart';
 
 class OTPVerifiedBloc extends Bloc<BaseEvent, BaseState> {
   @override

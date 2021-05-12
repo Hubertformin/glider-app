@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rentors/generated/l10n.dart';
+import 'package:glider/generated/l10n.dart';
 
 enum ProgressDialogType { Normal, Download }
 

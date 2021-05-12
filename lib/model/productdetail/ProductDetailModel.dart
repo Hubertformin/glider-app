@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:rentors/model/home/HomeModel.dart';
+import 'package:glider/model/home/HomeModel.dart';
 
 class ProductDetailModel {
   ProductDetailModel({
@@ -20,8 +20,7 @@ class ProductDetailModel {
         data: Data.fromJson(json["data"]),
       );
 
-  Map<String, dynamic> toJson() =>
-      {
+  Map<String, dynamic> toJson() => {
         "status": status,
         "message": message,
         "data": data.toJson(),
@@ -77,48 +76,35 @@ class Data {
   bool verificationRequired;
   List<Reviewdatum> reviewdata;
 
-  factory Data.fromJson(Map<String, dynamic> json) =>
-      Data(
-          id: json["id"],
-          productId: json["product_id"],
-          name: json["name"],
-          details: Details.fromJson(jsonDecode(json["details"])),
-          categoryId: json["category_id"],
-          subCategoryId: json["sub_category_id"],
-          categoryName: json["category_name"],
-          subCategoryName: json["sub_category_name"],
-          isFeatured: json["is_featured"],
-          featuredAt: DateTime.parse(json["featured_at"]),
-          createdAt: DateTime.parse(json["created_at"]),
-          updatedAt: json["updated_at"],
-          userId: json["user_id"],
-          status: json["status"],
-          isDelete: json["is_delete"],
-          isApproved: json["is_approved"],
-          isLike: json["is_like"],
-          userName: json["user_name"],
-          userImage: json["user_image"],
-          avgRatting: json["avg_ratting"],
-          verificationRequired:
-          json["verification_required"] != null ? json["verification_required"]
-              .toLowerCase() == '1' : false,
-          reviewdata: List<Reviewdatum>.from(
-      json["reviewdata"].map((x)
+  factory Data.fromJson(Map<String, dynamic> json) => Data(
+        id: json["id"],
+        productId: json["product_id"],
+        name: json["name"],
+        details: Details.fromJson(jsonDecode(json["details"])),
+        categoryId: json["category_id"],
+        subCategoryId: json["sub_category_id"],
+        categoryName: json["category_name"],
+        subCategoryName: json["sub_category_name"],
+        isFeatured: json["is_featured"],
+        featuredAt: DateTime.parse(json["featured_at"]),
+        createdAt: DateTime.parse(json["created_at"]),
+        updatedAt: json["updated_at"],
+        userId: json["user_id"],
+        status: json["status"],
+        isDelete: json["is_delete"],
+        isApproved: json["is_approved"],
+        isLike: json["is_like"],
+        userName: json["user_name"],
+        userImage: json["user_image"],
+        avgRatting: json["avg_ratting"],
+        verificationRequired: json["verification_required"] != null
+            ? json["verification_required"].toLowerCase() == '1'
+            : false,
+        reviewdata: List<Reviewdatum>.from(
+            json["reviewdata"].map((x) => Reviewdatum.fromJson(x))),
+      );
 
-  =>
-
-  Reviewdatum.fromJson(x)
-
-  )
-
-  )
-
-  ,
-
-  );
-
-  Map<String, dynamic> toJson() =>
-      {
+  Map<String, dynamic> toJson() => {
         "id": id,
         "product_id": productId,
         "name": name,
@@ -163,8 +149,7 @@ class Reviewdatum {
   String email;
   String profilePic;
 
-  factory Reviewdatum.fromJson(Map<String, dynamic> json) =>
-      Reviewdatum(
+  factory Reviewdatum.fromJson(Map<String, dynamic> json) => Reviewdatum(
         userId: json["user_id"],
         ratting: json["ratting"],
         review: json["review"],
@@ -174,8 +159,7 @@ class Reviewdatum {
         profilePic: json["profile_pic"],
       );
 
-  Map<String, dynamic> toJson() =>
-      {
+  Map<String, dynamic> toJson() => {
         "user_id": userId,
         "ratting": ratting,
         "review": review,

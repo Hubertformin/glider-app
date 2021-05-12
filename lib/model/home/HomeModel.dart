@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:rentors/HexColor.dart';
-import 'package:rentors/model/home/HomeBean.dart';
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/HexColor.dart';
+import 'package:glider/model/home/HomeBean.dart';
+import 'package:glider/util/Utils.dart';
 
 class HomeModel {
   HomeModel({
@@ -80,7 +80,7 @@ class Category {
 
   factory Category.fromJson(Map<String, dynamic> json) {
     String color = json["category_color"];
-    if (color==null||color.isEmpty) {
+    if (color == null || color.isEmpty) {
       color = "#F26D42";
     }
     return Category(

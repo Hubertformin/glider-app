@@ -1,4 +1,4 @@
-import 'package:rentors/state/BaseState.dart';
+import 'package:glider/state/BaseState.dart';
 
 class GatewayPaymentState extends BaseState {
   final dynamic result;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rentors/config/app_config.dart' as config;
+import 'package:glider/config/app_config.dart' as config;
 
 class SeparatorWidget extends StatelessWidget {
   final String name;

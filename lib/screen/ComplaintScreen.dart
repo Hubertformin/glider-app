@@ -2,15 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:rentors/bloc/ComplaintBloc.dart';
-import 'package:rentors/event/ComplaintEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/widget/AuctionFormField.dart';
-import 'package:rentors/widget/ProgressDialog.dart';
-import 'package:rentors/widget/RentorRaisedButton.dart';
+import 'package:glider/bloc/ComplaintBloc.dart';
+import 'package:glider/event/ComplaintEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/widget/AuctionFormField.dart';
+import 'package:glider/widget/ProgressDialog.dart';
+import 'package:glider/widget/GliderRaisedButton.dart';
 
 class ComplaintScreen extends StatefulWidget {
   @override
@@ -76,7 +76,7 @@ class ComplaintScreenState extends State<ComplaintScreen> {
                         return Container(
                             width: double.infinity,
                             margin: EdgeInsets.only(top: 10, bottom: 10),
-                            child: RentorRaisedButton(
+                            child: GliderRaisedButton(
                               onPressed: () {
                                 addComplaint();
                               },

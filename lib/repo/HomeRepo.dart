@@ -1,10 +1,10 @@
-import 'package:rentors/model/home/Home.dart';
-import 'package:rentors/model/home/HomeBean.dart';
-import 'package:rentors/model/home/HomeModel.dart';
-import 'package:rentors/model/home/Separator.dart';
-import 'package:rentors/model/home/SingleCategory.dart';
-import 'package:rentors/model/home/TwoCategory.dart';
-import 'package:rentors/repo/FreshDio.dart' as dio;
+import 'package:glider/model/home/Home.dart';
+import 'package:glider/model/home/HomeBean.dart';
+import 'package:glider/model/home/HomeModel.dart';
+import 'package:glider/model/home/Separator.dart';
+import 'package:glider/model/home/SingleCategory.dart';
+import 'package:glider/model/home/TwoCategory.dart';
+import 'package:glider/repo/FreshDio.dart' as dio;
 
 Future<Home> getHomeData() async {
   var response = await dio.httpClient().get("home/index/%0A");

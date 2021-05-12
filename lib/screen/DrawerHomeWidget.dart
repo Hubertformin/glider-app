@@ -4,10 +4,10 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/main.dart';
-import 'package:rentors/screen/home/HomeScreenWidget.dart';
-import 'package:rentors/widget/DrawerWidget.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/main.dart';
+import 'package:glider/screen/home/HomeScreenWidget.dart';
+import 'package:glider/widget/DrawerWidget.dart';
 
 class DrawerHomeWidget extends StatefulWidget {
   @override

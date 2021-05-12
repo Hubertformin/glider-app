@@ -1,5 +1,5 @@
-import 'package:rentors/model/chat/ChatModel.dart';
-import 'package:rentors/state/BaseState.dart';
+import 'package:glider/model/chat/ChatModel.dart';
+import 'package:glider/state/BaseState.dart';
 
 class ChatState extends BaseState {
   final ChatModel chat;

@@ -1,7 +1,7 @@
-import 'package:rentors/model/MyProductModel.dart';
-import 'package:rentors/model/Response.dart';
-import 'package:rentors/repo/FreshDio.dart' as dio;
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/model/MyProductModel.dart';
+import 'package:glider/model/Response.dart';
+import 'package:glider/repo/FreshDio.dart' as dio;
+import 'package:glider/util/Utils.dart';
 
 Future<MyProductModel> getMyProduct() async {
   var user = await Utils.getUser();

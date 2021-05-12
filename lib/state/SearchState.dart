@@ -1,5 +1,5 @@
-import 'package:rentors/model/SearchModel.dart';
-import 'package:rentors/state/BaseState.dart';
+import 'package:glider/model/SearchModel.dart';
+import 'package:glider/state/BaseState.dart';
 
 class SearchState extends BaseState {
   final SearchModel model;

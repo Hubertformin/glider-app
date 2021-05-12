@@ -1,5 +1,5 @@
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/model/category/CategoryList.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/model/category/CategoryList.dart';
 
 class SubCategoryEvent extends BaseEvent {
   final Category category;

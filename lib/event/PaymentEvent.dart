@@ -1,6 +1,6 @@
 import 'package:credit_card_input_form/model/card_info.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/screen/payment/SelectPaymentMethodScreen.dart'
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/screen/payment/SelectPaymentMethodScreen.dart'
     as payment;
 
 class PaymentEvent extends BaseEvent {

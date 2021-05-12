@@ -3,16 +3,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/bloc/NotificationBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/core/InheritedStateContainer.dart';
-import 'package:rentors/core/RentorState.dart';
-import 'package:rentors/event/GetNotificationEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/NotificationModel.dart' as notificaton;
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/NotificationListState.dart';
-import 'package:rentors/widget/ProgressIndicatorWidget.dart';
+import 'package:glider/bloc/NotificationBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/core/InheritedStateContainer.dart';
+import 'package:glider/core/glidertate.dart';
+import 'package:glider/event/GetNotificationEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/NotificationModel.dart' as notificaton;
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/NotificationListState.dart';
+import 'package:glider/widget/ProgressIndicatorWidget.dart';
 
 class NotificationScreen extends StatefulWidget {
   @override
@@ -21,7 +21,7 @@ class NotificationScreen extends StatefulWidget {
   }
 }
 
-class NotificationScreenScreenState extends RentorState<NotificationScreen> {
+class NotificationScreenScreenState extends glidertate<NotificationScreen> {
   NotificationBloc mBloc;
 
   @override
@@ -60,8 +60,8 @@ class NotificationScreenScreenState extends RentorState<NotificationScreen> {
                       alignment: Alignment.centerRight,
                       child: Text(
                         generateDateTime(item),
-                        style:
-                            TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                        style: TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w500),
                       ),
                     ),
                   ),

@@ -1,19 +1,19 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/CategoryDetailEvent.dart';
-import 'package:rentors/event/CategoryListEvent.dart';
-import 'package:rentors/event/ChangeSubCategory.dart';
-import 'package:rentors/event/SubCategoryDetailEvent.dart';
-import 'package:rentors/event/SubCategoryEvent.dart';
-import 'package:rentors/repo/CategoryRepo.dart' as categoryRepo;
-import 'package:rentors/repo/SubscriptionRepo.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/CategoryDetailState.dart';
-import 'package:rentors/state/CategoryListState.dart';
-import 'package:rentors/state/ChangeSubCategoryState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/state/SubCategoryDetailState.dart';
-import 'package:rentors/state/SubCategoryListState.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/CategoryDetailEvent.dart';
+import 'package:glider/event/CategoryListEvent.dart';
+import 'package:glider/event/ChangeSubCategory.dart';
+import 'package:glider/event/SubCategoryDetailEvent.dart';
+import 'package:glider/event/SubCategoryEvent.dart';
+import 'package:glider/repo/CategoryRepo.dart' as categoryRepo;
+import 'package:glider/repo/SubscriptionRepo.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/CategoryDetailState.dart';
+import 'package:glider/state/CategoryListState.dart';
+import 'package:glider/state/ChangeSubCategoryState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/state/SubCategoryDetailState.dart';
+import 'package:glider/state/SubCategoryListState.dart';
 
 class CategoryListBloc extends Bloc<BaseEvent, BaseState> {
   @override

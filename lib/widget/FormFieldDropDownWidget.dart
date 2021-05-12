@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rentors/model/DropDownItem.dart';
+import 'package:glider/model/DropDownItem.dart';
 
 class FormFieldDropDownWidget extends StatefulWidget {
   final String hint;

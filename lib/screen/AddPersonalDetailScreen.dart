@@ -4,33 +4,33 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
-import 'package:rentors/bloc/AddProductBloc.dart';
-import 'package:rentors/bloc/BookingProductBloc.dart';
-import 'package:rentors/bloc/OTPVerifiedBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/event/AddProductEvent.dart';
-import 'package:rentors/event/CityEvent.dart';
-import 'package:rentors/event/SendOTPEvent.dart';
-import 'package:rentors/event/VerifyOTPEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/AddProductModel.dart';
-import 'package:rentors/model/DropDownItem.dart';
-import 'package:rentors/model/MyProductModel.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/CityState.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/ErrorState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/util/ImagePicked.dart';
-import 'package:rentors/util/TypeEnum.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/AuctionField.dart';
-import 'package:rentors/widget/FormFieldDropDownWidget.dart';
-import 'package:rentors/widget/PinEntryTextField.dart';
-import 'package:rentors/widget/ProgressDialog.dart';
-import 'package:rentors/widget/ProgressIndicatorWidget.dart';
-import 'package:rentors/widget/RentorRaisedButton.dart';
-import 'package:rentors/widget/UploadPhotoWidget.dart';
+import 'package:glider/bloc/AddProductBloc.dart';
+import 'package:glider/bloc/BookingProductBloc.dart';
+import 'package:glider/bloc/OTPVerifiedBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/event/AddProductEvent.dart';
+import 'package:glider/event/CityEvent.dart';
+import 'package:glider/event/SendOTPEvent.dart';
+import 'package:glider/event/VerifyOTPEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/AddProductModel.dart';
+import 'package:glider/model/DropDownItem.dart';
+import 'package:glider/model/MyProductModel.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/CityState.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/ErrorState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/util/ImagePicked.dart';
+import 'package:glider/util/TypeEnum.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/AuctionField.dart';
+import 'package:glider/widget/FormFieldDropDownWidget.dart';
+import 'package:glider/widget/PinEntryTextField.dart';
+import 'package:glider/widget/ProgressDialog.dart';
+import 'package:glider/widget/ProgressIndicatorWidget.dart';
+import 'package:glider/widget/GliderRaisedButton.dart';
+import 'package:glider/widget/UploadPhotoWidget.dart';
 
 class AddPersonalDetailScreen extends StatefulWidget {
   final AddProductModel model;
@@ -260,7 +260,7 @@ class AddPersonalDetailScreenState extends State<AddPersonalDetailScreen> {
                                         width: double.infinity,
                                         margin: EdgeInsets.only(
                                             top: 10, bottom: 10),
-                                        child: RentorRaisedButton(
+                                        child: GliderRaisedButton(
                                           onPressed: () {
                                             addComplaint();
                                           },

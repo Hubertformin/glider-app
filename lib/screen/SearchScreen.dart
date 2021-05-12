@@ -2,20 +2,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
-import 'package:rentors/bloc/SearchBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/core/InheritedStateContainer.dart';
-import 'package:rentors/core/RentorState.dart';
-import 'package:rentors/event/SearchEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/SearchModel.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/ErrorState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/state/SearchState.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/LikeWidget.dart';
-import 'package:rentors/widget/PlaceHolderWidget.dart';
+import 'package:glider/bloc/SearchBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/core/InheritedStateContainer.dart';
+import 'package:glider/core/glidertate.dart';
+import 'package:glider/event/SearchEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/SearchModel.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/ErrorState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/state/SearchState.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/LikeWidget.dart';
+import 'package:glider/widget/PlaceHolderWidget.dart';
 import 'package:rxdart/rxdart.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -25,7 +25,7 @@ class SearchScreen extends StatefulWidget {
   }
 }
 
-class SearchScreenState extends RentorState<SearchScreen> {
+class SearchScreenState extends glidertate<SearchScreen> {
   SearchBloc mBloc;
 
   List<SearchItem> searchItem = List();
@@ -167,9 +167,7 @@ class SearchScreenState extends RentorState<SearchScreen> {
                 enabledBorder: InputBorder.none,
                 errorBorder: InputBorder.none,
                 disabledBorder: InputBorder.none,
-                hintText: S
-                    .of(context)
-                    .search,
+                hintText: S.of(context).search,
                 hintStyle: TextStyle(color: Colors.white))),
       ),
     );

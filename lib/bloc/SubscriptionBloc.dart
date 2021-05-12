@@ -1,11 +1,11 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/SubscriptionListEvent.dart';
-import 'package:rentors/repo/SubscriptionRepo.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/ErrorState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/state/SubscriptionListState.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/SubscriptionListEvent.dart';
+import 'package:glider/repo/SubscriptionRepo.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/ErrorState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/state/SubscriptionListState.dart';
 
 class SubscriptionBloc extends Bloc<BaseEvent, BaseState> {
   @override

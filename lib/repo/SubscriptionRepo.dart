@@ -1,8 +1,8 @@
-import 'package:rentors/model/FeatureSubscriptionList.dart';
-import 'package:rentors/model/SubscriptionList.dart';
-import 'package:rentors/model/subscription/CheckSubscriptionModel.dart';
-import 'package:rentors/repo/FreshDio.dart' as dio;
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/model/FeatureSubscriptionList.dart';
+import 'package:glider/model/SubscriptionList.dart';
+import 'package:glider/model/subscription/CheckSubscriptionModel.dart';
+import 'package:glider/repo/FreshDio.dart' as dio;
+import 'package:glider/util/Utils.dart';
 
 Future<FeatureSubscriptionList> getFeatureSubscriptionList() async {
   var response =

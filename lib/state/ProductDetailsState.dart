@@ -1,5 +1,5 @@
-import 'package:rentors/model/productdetail/ProductDetailModel.dart';
-import 'package:rentors/state/BaseState.dart';
+import 'package:glider/model/productdetail/ProductDetailModel.dart';
+import 'package:glider/state/BaseState.dart';
 
 class ProductDetailsState extends BaseState {
   final ProductDetailModel model;

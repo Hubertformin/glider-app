@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rentors/model/DropDownItem.dart';
-import 'package:rentors/model/home/HomeModel.dart';
+import 'package:glider/model/DropDownItem.dart';
+import 'package:glider/model/home/HomeModel.dart';
 
 enum DurationTypeEnum { HOURS, DAYS, MONTHS }
 

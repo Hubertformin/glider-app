@@ -1,7 +1,7 @@
-import 'package:rentors/event/BaseEvent.dart';
+import 'package:glider/event/BaseEvent.dart';
 
 class LikeEvent extends BaseEvent {
- final String productId;
+  final String productId;
 
   LikeEvent(this.productId);
 }

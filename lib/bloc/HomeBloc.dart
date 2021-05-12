@@ -1,11 +1,11 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/HomeEvent.dart';
-import 'package:rentors/repo/HomeRepo.dart' as homeRepo;
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/ErrorState.dart';
-import 'package:rentors/state/HomeState.dart';
-import 'package:rentors/state/OtpState.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/HomeEvent.dart';
+import 'package:glider/repo/HomeRepo.dart' as homeRepo;
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/ErrorState.dart';
+import 'package:glider/state/HomeState.dart';
+import 'package:glider/state/OtpState.dart';
 
 class HomeBloc extends Bloc<BaseEvent, BaseState> {
   @override

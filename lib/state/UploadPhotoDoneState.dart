@@ -1,6 +1,6 @@
-import 'package:rentors/model/UploadPicsModel.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/util/TypeEnum.dart';
+import 'package:glider/model/UploadPicsModel.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/util/TypeEnum.dart';
 
 class UploadPhotoDoneState extends BaseState {
   final UploadPicsModel home;

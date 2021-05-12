@@ -1,14 +1,14 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:rentors/bloc/OTPVerifiedBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/event/SendOTPEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/state/ErrorState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/widget/ProgressDialog.dart';
-import 'package:rentors/widget/RentorRaisedButton.dart';
+import 'package:glider/bloc/OTPVerifiedBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/event/SendOTPEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/state/ErrorState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/widget/ProgressDialog.dart';
+import 'package:glider/widget/GliderRaisedButton.dart';
 
 class SignWithMobileWidget extends StatefulWidget {
   @override
@@ -125,7 +125,7 @@ class SignWithMobileWidgetState extends State<SignWithMobileWidget> {
                   Container(
                     width: double.infinity,
                     margin: EdgeInsets.only(top: 10),
-                    child: RentorRaisedButton(
+                    child: GliderRaisedButton(
                       child: Text(
                         S.of(context).login,
                         style: TextStyle(

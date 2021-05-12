@@ -2,20 +2,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/bloc/ConversationBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/event/ChatEvent.dart';
-import 'package:rentors/event/SendMessageEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/main.dart';
-import 'package:rentors/model/UserModel.dart';
-import 'package:rentors/model/chat/ChatModel.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/ChatState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/ProgressIndicatorWidget.dart';
-import 'package:rentors/widget/RentorGradient.dart';
+import 'package:glider/bloc/ConversationBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/event/ChatEvent.dart';
+import 'package:glider/event/SendMessageEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/main.dart';
+import 'package:glider/model/UserModel.dart';
+import 'package:glider/model/chat/ChatModel.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/ChatState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/ProgressIndicatorWidget.dart';
+import 'package:glider/widget/GliderGradient.dart';
 import 'package:timeago/timeago.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -71,7 +71,7 @@ class ChatScreenState extends State<ChatScreen> {
                 topLeft: Radius.circular(10),
                 topRight: Radius.circular(10),
                 bottomLeft: Radius.circular(10)),
-            gradient: RentorGradient(),
+            gradient: GliderGradient(),
           ),
           margin: EdgeInsets.all(10),
           padding: EdgeInsets.only(left: 10, right: 10, top: 5, bottom: 5),

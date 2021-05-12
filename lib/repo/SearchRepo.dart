@@ -1,5 +1,5 @@
-import 'package:rentors/model/SearchModel.dart';
-import 'package:rentors/repo/FreshDio.dart' as dio;
+import 'package:glider/model/SearchModel.dart';
+import 'package:glider/repo/FreshDio.dart' as dio;
 
 Future<SearchModel> searchResult(String query) async {
   var map = Map();

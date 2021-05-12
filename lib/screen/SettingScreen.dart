@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rentors/dynamic_theme/dynamic_theme.dart';
-import 'package:rentors/generated/l10n.dart';
+import 'package:glider/dynamic_theme/dynamic_theme.dart';
+import 'package:glider/generated/l10n.dart';
 
 class SettingScreen extends StatefulWidget {
   @override
@@ -85,7 +85,7 @@ class SettingScreenState extends State<SettingScreen> {
                 onTap: () {
                   var map = Map();
                   map["title"] = S.of(context).contactUs;
-                  map["url"] = "https://www.rentors.applatus.com/#contact";
+                  map["url"] = "https://www.glider.applatus.com/#contact";
                   Navigator.of(context).pushNamed('/webview', arguments: map);
                 },
                 child: Row(

@@ -1,4 +1,4 @@
-import 'package:rentors/event/BaseEvent.dart';
+import 'package:glider/event/BaseEvent.dart';
 
 class ChangePasswordEvent extends BaseEvent {
   final String newPassword;

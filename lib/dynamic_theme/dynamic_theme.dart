@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/util/Utils.dart';
 
 typedef ThemedWidgetBuilder = Widget Function(
     BuildContext context, ThemeData data);

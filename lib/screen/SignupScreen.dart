@@ -1,21 +1,21 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:rentors/bloc/LoginBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/event/SendEmaiEvent.dart';
-import 'package:rentors/event/SignupEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/EmailSentState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/state/SignInWithEmailState.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/PasswordField.dart';
-import 'package:rentors/widget/PinEntryTextField.dart';
-import 'package:rentors/widget/ProgressDialog.dart';
-import 'package:rentors/widget/RentorRaisedButton.dart';
-import 'package:rentors/widget/RoundedFloatingField.dart';
+import 'package:glider/bloc/LoginBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/event/SendEmaiEvent.dart';
+import 'package:glider/event/SignupEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/EmailSentState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/state/SignInWithEmailState.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/PasswordField.dart';
+import 'package:glider/widget/PinEntryTextField.dart';
+import 'package:glider/widget/ProgressDialog.dart';
+import 'package:glider/widget/GliderRaisedButton.dart';
+import 'package:glider/widget/RoundedFloatingField.dart';
 
 class SignupScreen extends StatefulWidget {
   @override
@@ -108,7 +108,7 @@ class SignupScreenState extends State<SignupScreen> {
                   Container(
                     width: double.infinity,
                     margin: EdgeInsets.only(top: 10),
-                    child: RentorRaisedButton(
+                    child: GliderRaisedButton(
                       child: Text(
                         S.of(context).createAccount,
                         style: TextStyle(
@@ -139,7 +139,7 @@ class SignupScreenState extends State<SignupScreen> {
     } else if (EmailValidator.validate(email)) {
       otp = Utils.generateOTP();
       var msg = S.of(context).yourEmailVerificationOtpIs(otp);
-      mBloc.add(SendEmaiEvent(email, "Rentors", msg));
+      mBloc.add(SendEmaiEvent(email, "glider", msg));
     } else {
       Fluttertoast.showToast(msg: S.of(context).enterValidEmailAddress);
     }

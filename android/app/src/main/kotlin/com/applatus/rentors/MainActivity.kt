@@ -1,4 +1,4 @@
-package com.applatus.rentors
+package com.applatus.glider
 
 import io.flutter.embedding.android.FlutterActivity
 

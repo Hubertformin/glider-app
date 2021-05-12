@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-import 'package:rentors/dynamic_theme/dynamic_theme.dart';
+import 'package:glider/dynamic_theme/dynamic_theme.dart';
 
 class InAppWebViewScreen extends StatefulWidget {
   final String title;

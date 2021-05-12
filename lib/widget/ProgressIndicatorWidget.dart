@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rentors/widget/CenterHorizontal.dart';
+import 'package:glider/widget/CenterHorizontal.dart';
 
 class ProgressIndicatorWidget extends StatelessWidget {
   @override

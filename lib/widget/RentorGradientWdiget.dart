@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class RentorGradientWidget extends StatelessWidget {
+class GliderGradientWidget extends StatelessWidget {
   final Widget child;
 
-  RentorGradientWidget(this.child);
+  GliderGradientWidget(this.child);
 
   @override
   Widget build(BuildContext context) {

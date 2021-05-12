@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rentors/bloc/ProductDetailsBloc.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/screen/booking/MyBookingScreen.dart';
-import 'package:rentors/screen/booking/MyProductBookingScreen.dart';
-import 'package:rentors/widget/CenterHorizontal.dart';
+import 'package:glider/bloc/ProductDetailsBloc.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/screen/booking/MyBookingScreen.dart';
+import 'package:glider/screen/booking/MyProductBookingScreen.dart';
+import 'package:glider/widget/CenterHorizontal.dart';
 
 class BookingScreen extends StatefulWidget {
   @override

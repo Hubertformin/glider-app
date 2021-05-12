@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/screen/splash/Page1Widget.dart';
-import 'package:rentors/screen/splash/Page2Widget.dart';
-import 'package:rentors/screen/splash/Page3Widget.dart';
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/screen/splash/Page1Widget.dart';
+import 'package:glider/screen/splash/Page2Widget.dart';
+import 'package:glider/screen/splash/Page3Widget.dart';
+import 'package:glider/util/Utils.dart';
 
 class PagerViewWidget extends StatelessWidget {
   final PageController _controller = PageController(

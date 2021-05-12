@@ -1,10 +1,10 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/ChangePasswordEvent.dart';
-import 'package:rentors/repo/ChangePasswordRepo.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/OtpState.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/ChangePasswordEvent.dart';
+import 'package:glider/repo/ChangePasswordRepo.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/OtpState.dart';
 
 class ChangePasswordBloc extends Bloc<BaseEvent, BaseState> {
   @override

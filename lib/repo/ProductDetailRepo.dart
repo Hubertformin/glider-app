@@ -1,6 +1,6 @@
-import 'package:rentors/model/productdetail/AllProductModel.dart';
-import 'package:rentors/model/productdetail/ProductDetailModel.dart';
-import 'package:rentors/repo/FreshDio.dart' as dio;
+import 'package:glider/model/productdetail/AllProductModel.dart';
+import 'package:glider/model/productdetail/ProductDetailModel.dart';
+import 'package:glider/repo/FreshDio.dart' as dio;
 
 Future<ProductDetailModel> getProductDetails(id) async {
   var response = await dio.httpClient().get("product/detail/" + id);

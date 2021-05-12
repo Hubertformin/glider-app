@@ -1,13 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:rentors/model/CityModel.dart';
-import 'package:rentors/model/Response.dart' as res;
-import 'package:rentors/model/UploadPicsModel.dart';
-import 'package:rentors/model/UserModel.dart';
-import 'package:rentors/model/booking/MyBooking.dart';
-import 'package:rentors/model/booking/MyProductBookingModel.dart';
-import 'package:rentors/repo/FreshDio.dart' as dio;
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/model/CityModel.dart';
+import 'package:glider/model/Response.dart' as res;
+import 'package:glider/model/UploadPicsModel.dart';
+import 'package:glider/model/UserModel.dart';
+import 'package:glider/model/booking/MyBooking.dart';
+import 'package:glider/model/booking/MyProductBookingModel.dart';
+import 'package:glider/repo/FreshDio.dart' as dio;
+import 'package:glider/util/Utils.dart';
 
 Future<MyBooking> getBookingRepo() async {
   UserModel model = await Utils.getUser();

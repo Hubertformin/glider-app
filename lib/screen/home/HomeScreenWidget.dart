@@ -7,26 +7,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
-import 'package:rentors/bloc/HomeBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/core/InheritedStateContainer.dart';
-import 'package:rentors/core/RentorState.dart';
-import 'package:rentors/event/HomeEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/home/Home.dart';
-import 'package:rentors/model/home/HomeModel.dart';
-import 'package:rentors/model/home/Separator.dart';
-import 'package:rentors/model/home/TwoCategory.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/ErrorState.dart';
-import 'package:rentors/state/HomeState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/util/CommonConstant.dart';
-import 'package:rentors/widget/CenterHorizontal.dart';
-import 'package:rentors/widget/NetworkErrorWidget.dart';
-import 'package:rentors/widget/ProductViewWidget.dart';
-import 'package:rentors/widget/SeparatorWidget.dart';
-import 'package:rentors/widget/StartRentingItemWidget.dart';
+import 'package:glider/bloc/HomeBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/core/InheritedStateContainer.dart';
+import 'package:glider/core/glidertate.dart';
+import 'package:glider/event/HomeEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/home/Home.dart';
+import 'package:glider/model/home/HomeModel.dart';
+import 'package:glider/model/home/Separator.dart';
+import 'package:glider/model/home/TwoCategory.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/ErrorState.dart';
+import 'package:glider/state/HomeState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/util/CommonConstant.dart';
+import 'package:glider/widget/CenterHorizontal.dart';
+import 'package:glider/widget/NetworkErrorWidget.dart';
+import 'package:glider/widget/ProductViewWidget.dart';
+import 'package:glider/widget/SeparatorWidget.dart';
+import 'package:glider/widget/StartRentingItemWidget.dart';
 
 class HomeScreenWidget extends StatefulWidget {
   @override
@@ -35,7 +35,7 @@ class HomeScreenWidget extends StatefulWidget {
   }
 }
 
-class HomeScreenWidgetState extends RentorState<HomeScreenWidget> {
+class HomeScreenWidgetState extends glidertate<HomeScreenWidget> {
   HomeBloc mBloc = new HomeBloc();
 
   Home data;

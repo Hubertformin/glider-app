@@ -2,15 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:rentors/bloc/WishBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/core/RentorState.dart';
-import 'package:rentors/event/LikeEvent.dart';
-import 'package:rentors/event/UnLikeEvent.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/widget/ProgressDialog.dart';
+import 'package:glider/bloc/WishBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/core/glidertate.dart';
+import 'package:glider/event/LikeEvent.dart';
+import 'package:glider/event/UnLikeEvent.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/widget/ProgressDialog.dart';
 
 class LikeWidget extends StatefulWidget {
   final String productId;
@@ -39,7 +39,7 @@ class LikeWidgetState extends State<LikeWidget> {
           mDialog = null;
         }
         Fluttertoast.showToast(msg: state.home.message);
-        RentorState.of(context).update();
+        glidertate.of(context).update();
       } else if (state is ProgressDialogState) {
         mDialog = ProgressDialog(context);
         mDialog.show();

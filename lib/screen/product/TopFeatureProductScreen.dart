@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/core/InheritedStateContainer.dart';
-import 'package:rentors/core/RentorState.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/home/HomeModel.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/LikeWidget.dart';
-import 'package:rentors/widget/PlaceHolderWidget.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/core/InheritedStateContainer.dart';
+import 'package:glider/core/glidertate.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/home/HomeModel.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/LikeWidget.dart';
+import 'package:glider/widget/PlaceHolderWidget.dart';
 
 class TopFeatureProductScreen extends StatefulWidget {
   final List<FeaturedProductElement> featuredProducts;
@@ -21,8 +21,7 @@ class TopFeatureProductScreen extends StatefulWidget {
   }
 }
 
-class TopFeatureProductScreenState
-    extends RentorState<TopFeatureProductScreen> {
+class TopFeatureProductScreenState extends glidertate<TopFeatureProductScreen> {
   @override
   void initState() {
     super.initState();
@@ -120,7 +119,5 @@ class TopFeatureProductScreenState
   }
 
   @override
-  void update() {
-
-  }
+  void update() {}
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/generated/l10n.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/generated/l10n.dart';
 
 class Page2Widget extends StatelessWidget {
   @override
@@ -28,7 +28,7 @@ class Page2Widget extends StatelessWidget {
                 height: 150,
               ),
               Text(
-                S.of(context).rentors,
+                S.of(context).glider,
                 style: TextStyle(
                     fontSize: 22,
                     color: Colors.white,

@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/core/RentorState.dart';
-import 'package:rentors/generated/l10n.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/core/glidertate.dart';
+import 'package:glider/generated/l10n.dart';
 
 class NetworkWidget extends StatefulWidget {
   NetworkWidget();
@@ -48,7 +48,7 @@ class NetworkWidgetState extends State<NetworkWidget> {
                 ),
                 OutlineButton(
                     onPressed: () {
-                      RentorState.of(context).update();
+                      glidertate.of(context).update();
                     },
                     child: Text(
                       S.of(context).retry,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rentors/core/RentorState.dart';
+import 'package:glider/core/glidertate.dart';
 
 class InheritedStateContainer extends InheritedWidget {
   // Data is your entire state. In our case just 'User'
-  final RentorState state;
+  final glidertate state;
 
   // You must pass through a child and your state.
   InheritedStateContainer({

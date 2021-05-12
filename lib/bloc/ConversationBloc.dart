@@ -1,13 +1,13 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/ChatEvent.dart';
-import 'package:rentors/event/ConversationEvent.dart';
-import 'package:rentors/event/SendMessageEvent.dart';
-import 'package:rentors/repo/ChatRepo.dart' as categoryRepo;
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/ChatState.dart';
-import 'package:rentors/state/ConversationState.dart';
-import 'package:rentors/state/OtpState.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/ChatEvent.dart';
+import 'package:glider/event/ConversationEvent.dart';
+import 'package:glider/event/SendMessageEvent.dart';
+import 'package:glider/repo/ChatRepo.dart' as categoryRepo;
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/ChatState.dart';
+import 'package:glider/state/ConversationState.dart';
+import 'package:glider/state/OtpState.dart';
 
 class ConversationBloc extends Bloc<BaseEvent, BaseState> {
   @override

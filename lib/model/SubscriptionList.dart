@@ -1,4 +1,4 @@
-import 'package:rentors/model/FeatureSubscriptionList.dart';
+import 'package:glider/model/FeatureSubscriptionList.dart';
 
 class SubscriptionList {
   SubscriptionList({

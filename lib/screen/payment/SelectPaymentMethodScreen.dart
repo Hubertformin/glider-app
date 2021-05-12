@@ -2,10 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/FeatureSubscriptionList.dart';
-import 'package:rentors/widget/ProgressDialog.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/FeatureSubscriptionList.dart';
+import 'package:glider/widget/ProgressDialog.dart';
 
 class SelectPaymentMethodScreen extends StatefulWidget {
   final String productId;

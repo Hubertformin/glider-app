@@ -1,15 +1,15 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:rentors/bloc/LoginBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/event/ForgotPasswordEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/OtpState.dart';
-import 'package:rentors/widget/ProgressDialog.dart';
-import 'package:rentors/widget/RentorRaisedButton.dart';
-import 'package:rentors/widget/RoundedFloatingField.dart';
+import 'package:glider/bloc/LoginBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/event/ForgotPasswordEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/OtpState.dart';
+import 'package:glider/widget/ProgressDialog.dart';
+import 'package:glider/widget/GliderRaisedButton.dart';
+import 'package:glider/widget/RoundedFloatingField.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   @override
@@ -79,7 +79,7 @@ class ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   Container(
                     width: double.infinity,
                     margin: EdgeInsets.only(top: 10),
-                    child: RentorRaisedButton(
+                    child: GliderRaisedButton(
                       child: Text(
                         S.of(context).submit,
                         style: TextStyle(

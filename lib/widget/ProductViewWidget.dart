@@ -3,13 +3,13 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/home/HomeModel.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/FeatureWidget.dart';
-import 'package:rentors/widget/LikeWidget.dart';
-import 'package:rentors/widget/PlaceHolderWidget.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/home/HomeModel.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/FeatureWidget.dart';
+import 'package:glider/widget/LikeWidget.dart';
+import 'package:glider/widget/PlaceHolderWidget.dart';
 
 class ProductViewWidget extends StatelessWidget {
   final FeaturedProductElement products;

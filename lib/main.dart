@@ -11,25 +11,25 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/dynamic_theme/dynamic_theme.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/repo/LoginRepo.dart';
-import 'package:rentors/route_generator.dart';
-import 'package:rentors/util/Settings.dart';
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/dynamic_theme/dynamic_theme.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/repo/LoginRepo.dart';
+import 'package:glider/route_generator.dart';
+import 'package:glider/util/Settings.dart';
+import 'package:glider/util/Utils.dart';
 import 'package:rxdart/rxdart.dart';
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-FlutterLocalNotificationsPlugin();
+    FlutterLocalNotificationsPlugin();
 
 /// Streams are created so that app can respond to notification-related events
 /// since the plugin is initialised in the `main` function
 final BehaviorSubject<ReceivedNotification> didReceiveLocalNotificationSubject =
-BehaviorSubject<ReceivedNotification>();
+    BehaviorSubject<ReceivedNotification>();
 
 final BehaviorSubject<String> selectNotificationSubject =
-BehaviorSubject<String>();
+    BehaviorSubject<String>();
 
 class ReceivedNotification {
   ReceivedNotification({
@@ -60,8 +60,8 @@ void main() async {
   getMessage();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
       statusBarBrightness:
-      Brightness.light // Dark == white status bar -- for IOS.
-  ));
+          Brightness.light // Dark == white status bar -- for IOS.
+      ));
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
     runZonedGuarded(() {
@@ -111,28 +111,28 @@ void initNotification() async {
   //     await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
 
   const AndroidInitializationSettings initializationSettingsAndroid =
-  AndroidInitializationSettings('ic_launcher');
+      AndroidInitializationSettings('ic_launcher');
 
   /// Note: permissions aren't requested here just to demonstrate that can be
   /// done later
   final IOSInitializationSettings initializationSettingsIOS =
-  IOSInitializationSettings(
-      requestAlertPermission: false,
-      requestBadgePermission: false,
-      requestSoundPermission: false,
-      onDidReceiveLocalNotification:
-          (int id, String title, String body, String payload) async {
-        print("ios received notification");
-      });
+      IOSInitializationSettings(
+          requestAlertPermission: false,
+          requestBadgePermission: false,
+          requestSoundPermission: false,
+          onDidReceiveLocalNotification:
+              (int id, String title, String body, String payload) async {
+            print("ios received notification");
+          });
 
   final InitializationSettings initializationSettings = InitializationSettings(
       android: initializationSettingsAndroid, iOS: initializationSettingsIOS);
   await flutterLocalNotificationsPlugin.initialize(initializationSettings,
       onSelectNotification: (String payload) async {
-        if (payload != null) {
-          selectNotificationSubject.add(payload);
-        }
-      });
+    if (payload != null) {
+      selectNotificationSubject.add(payload);
+    }
+  });
 }
 
 Future myBackgroundMessageHandler(RemoteMessage message) {
@@ -168,9 +168,7 @@ void getMessage() async {
     print("push");
     print(event);
     didReceiveLocalNotificationSubject.add(ReceivedNotification(
-        id: DateTime
-            .now()
-            .microsecondsSinceEpoch,
+        id: DateTime.now().microsecondsSinceEpoch,
         title: event.notification.title,
         body: event.notification.body,
         payload: jsonEncode(event.data)));
@@ -208,39 +206,23 @@ class MyApp extends StatelessWidget {
           if (brightness == Brightness.light) {
             return ThemeData(
               useTextSelectionTheme: true,
-              backgroundColor: config
-                  .Colors()
-                  .white,
+              backgroundColor: config.Colors().white,
               fontFamily: 'open',
               primarySwatch: config.Colors()
-                  .generateMaterialColor(config
-                  .Colors()
-                  .mainColor),
-              primaryColor: config
-                  .Colors()
-                  .mainColor,
+                  .generateMaterialColor(config.Colors().mainColor),
+              primaryColor: config.Colors().mainColor,
               brightness: brightness,
               buttonTheme: ButtonThemeData(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18.0),
                 ),
                 textTheme: ButtonTextTheme.normal,
-                buttonColor: config
-                    .Colors()
-                    .orangeColor,
+                buttonColor: config.Colors().orangeColor,
               ),
-              buttonColor: config
-                  .Colors()
-                  .orangeColor,
-              accentColor: config
-                  .Colors()
-                  .orangeColor,
-              focusColor: config
-                  .Colors()
-                  .accentColor,
-              hintColor: config
-                  .Colors()
-                  .secondColor,
+              buttonColor: config.Colors().orangeColor,
+              accentColor: config.Colors().orangeColor,
+              focusColor: config.Colors().accentColor,
+              hintColor: config.Colors().secondColor,
               pageTransitionsTheme: const PageTransitionsTheme(
                 builders: <TargetPlatform, PageTransitionsBuilder>{
                   TargetPlatform.android: ZoomPageTransitionsBuilder(),
@@ -248,15 +230,9 @@ class MyApp extends StatelessWidget {
                 },
               ),
               textSelectionTheme: TextSelectionThemeData(
-                cursorColor: config
-                    .Colors()
-                    .orangeColor,
-                selectionColor: config
-                    .Colors()
-                    .orangeColor,
-                selectionHandleColor: config
-                    .Colors()
-                    .orangeColor,
+                cursorColor: config.Colors().orangeColor,
+                selectionColor: config.Colors().orangeColor,
+                selectionHandleColor: config.Colors().orangeColor,
               ),
               appBarTheme: AppBarTheme(
                 elevation: 0,
@@ -264,57 +240,37 @@ class MyApp extends StatelessWidget {
               ),
               textTheme: TextTheme(
                 headline5: TextStyle(
-                    fontSize: 20.0, color: config
-                    .Colors()
-                    .secondColor),
+                    fontSize: 20.0, color: config.Colors().secondColor),
                 headline4: TextStyle(
                     fontSize: 18.0,
                     fontWeight: FontWeight.w600,
-                    color: config
-                        .Colors()
-                        .secondColor),
+                    color: config.Colors().secondColor),
                 headline3: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.w600,
-                    color: config
-                        .Colors()
-                        .secondColor),
+                    color: config.Colors().secondColor),
                 headline2: TextStyle(
                     fontSize: 22.0,
                     fontWeight: FontWeight.w700,
-                    color: config
-                        .Colors()
-                        .secondColor),
+                    color: config.Colors().secondColor),
                 headline1: TextStyle(
                     fontSize: 22.0,
                     fontWeight: FontWeight.w300,
-                    color: config
-                        .Colors()
-                        .secondColor),
+                    color: config.Colors().secondColor),
                 subtitle1: TextStyle(
                     fontSize: 15.0,
                     fontWeight: FontWeight.w500,
-                    color: config
-                        .Colors()
-                        .secondColor),
+                    color: config.Colors().secondColor),
                 headline6: TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.w600,
-                    color: config
-                        .Colors()
-                        .secondColor),
+                    color: config.Colors().secondColor),
                 bodyText2: TextStyle(
-                    fontSize: 12.0, color: config
-                    .Colors()
-                    .secondColor),
+                    fontSize: 12.0, color: config.Colors().secondColor),
                 bodyText1: TextStyle(
-                    fontSize: 14.0, color: config
-                    .Colors()
-                    .secondColor),
+                    fontSize: 14.0, color: config.Colors().secondColor),
                 caption: TextStyle(
-                    fontSize: 12.0, color: config
-                    .Colors()
-                    .accentColor),
+                    fontSize: 12.0, color: config.Colors().accentColor),
               ),
             );
           } else {
@@ -326,23 +282,13 @@ class MyApp extends StatelessWidget {
                 },
               ),
               useTextSelectionTheme: true,
-              cursorColor: config
-                  .Colors()
-                  .orangeColor,
-              textSelectionColor: config
-                  .Colors()
-                  .orangeColor,
-              textSelectionHandleColor: config
-                  .Colors()
-                  .orangeColor,
+              cursorColor: config.Colors().orangeColor,
+              textSelectionColor: config.Colors().orangeColor,
+              textSelectionHandleColor: config.Colors().orangeColor,
               fontFamily: 'open',
               primarySwatch: config.Colors()
-                  .generateMaterialColor(config
-                  .Colors()
-                  .mainDarkColor),
-              buttonColor: config
-                  .Colors()
-                  .mainColor,
+                  .generateMaterialColor(config.Colors().mainDarkColor),
+              buttonColor: config.Colors().mainColor,
               primaryColor: Color(0xFF252525),
               brightness: Brightness.dark,
               scaffoldBackgroundColor: Color(0xFF2C2C2C),
@@ -350,29 +296,15 @@ class MyApp extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18.0),
                 ),
-                buttonColor: config
-                    .Colors()
-                    .orangeColor,
+                buttonColor: config.Colors().orangeColor,
               ),
-              accentColor: config
-                  .Colors()
-                  .accentColor,
-              hintColor: config
-                  .Colors()
-                  .secondDarkColor,
-              focusColor: config
-                  .Colors()
-                  .accentDarkColor,
+              accentColor: config.Colors().accentColor,
+              hintColor: config.Colors().secondDarkColor,
+              focusColor: config.Colors().accentDarkColor,
               textSelectionTheme: TextSelectionThemeData(
-                cursorColor: config
-                    .Colors()
-                    .orangeColor,
-                selectionColor: config
-                    .Colors()
-                    .orangeColor,
-                selectionHandleColor: config
-                    .Colors()
-                    .orangeColor,
+                cursorColor: config.Colors().orangeColor,
+                selectionColor: config.Colors().orangeColor,
+                selectionHandleColor: config.Colors().orangeColor,
               ),
               appBarTheme: AppBarTheme(
                 elevation: 0,
@@ -380,57 +312,37 @@ class MyApp extends StatelessWidget {
               ),
               textTheme: TextTheme(
                 headline5: TextStyle(
-                    fontSize: 20.0, color: config
-                    .Colors()
-                    .secondDarkColor),
+                    fontSize: 20.0, color: config.Colors().secondDarkColor),
                 headline4: TextStyle(
                     fontSize: 18.0,
                     fontWeight: FontWeight.w600,
-                    color: config
-                        .Colors()
-                        .secondDarkColor),
+                    color: config.Colors().secondDarkColor),
                 headline3: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.w600,
-                    color: config
-                        .Colors()
-                        .secondDarkColor),
+                    color: config.Colors().secondDarkColor),
                 headline2: TextStyle(
                     fontSize: 22.0,
                     fontWeight: FontWeight.w700,
-                    color: config
-                        .Colors()
-                        .mainDarkColor),
+                    color: config.Colors().mainDarkColor),
                 headline1: TextStyle(
                     fontSize: 22.0,
                     fontWeight: FontWeight.w300,
-                    color: config
-                        .Colors()
-                        .secondDarkColor),
+                    color: config.Colors().secondDarkColor),
                 subtitle1: TextStyle(
                     fontSize: 15.0,
                     fontWeight: FontWeight.w500,
-                    color: config
-                        .Colors()
-                        .secondDarkColor),
+                    color: config.Colors().secondDarkColor),
                 headline6: TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.w600,
-                    color: config
-                        .Colors()
-                        .mainDarkColor),
+                    color: config.Colors().mainDarkColor),
                 bodyText2: TextStyle(
-                    fontSize: 12.0, color: config
-                    .Colors()
-                    .secondDarkColor),
+                    fontSize: 12.0, color: config.Colors().secondDarkColor),
                 bodyText1: TextStyle(
-                    fontSize: 14.0, color: config
-                    .Colors()
-                    .secondDarkColor),
+                    fontSize: 14.0, color: config.Colors().secondDarkColor),
                 caption: TextStyle(
-                    fontSize: 12.0, color: config
-                    .Colors()
-                    .secondDarkColor),
+                    fontSize: 12.0, color: config.Colors().secondDarkColor),
               ),
             );
           }

@@ -2,17 +2,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/bloc/SubscriptionBloc.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/core/InheritedStateContainer.dart';
-import 'package:rentors/core/RentorState.dart';
-import 'package:rentors/event/SubscriptionListEvent.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/FeatureSubscriptionList.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/SubscriptionListState.dart';
-import 'package:rentors/widget/ProgressIndicatorWidget.dart';
-import 'package:rentors/widget/RentorGradient.dart';
+import 'package:glider/bloc/SubscriptionBloc.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/core/InheritedStateContainer.dart';
+import 'package:glider/core/glidertate.dart';
+import 'package:glider/event/SubscriptionListEvent.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/FeatureSubscriptionList.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/SubscriptionListState.dart';
+import 'package:glider/widget/ProgressIndicatorWidget.dart';
+import 'package:glider/widget/GliderGradient.dart';
 
 class SubScriptionListScreen extends StatefulWidget {
   @override
@@ -21,7 +21,7 @@ class SubScriptionListScreen extends StatefulWidget {
   }
 }
 
-class SubScriptionListScreenState extends RentorState<SubScriptionListScreen> {
+class SubScriptionListScreenState extends glidertate<SubScriptionListScreen> {
   SubscriptionBloc mBloc;
 
   @override
@@ -94,7 +94,7 @@ class SubScriptionListScreenState extends RentorState<SubScriptionListScreen> {
                         margin: EdgeInsets.all(10),
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                            gradient: RentorGradient(),
+                            gradient: GliderGradient(),
                             borderRadius: BorderRadius.circular(5)),
                         alignment: Alignment.center,
                         child: InkWell(
@@ -106,7 +106,7 @@ class SubScriptionListScreenState extends RentorState<SubScriptionListScreen> {
                                 .popAndPushNamed("/payment_method",
                                     arguments: map)
                                 .then((value) {
-                              RentorState.of(context).update();
+                              glidertate.of(context).update();
                             });
                           },
                           child: Text(

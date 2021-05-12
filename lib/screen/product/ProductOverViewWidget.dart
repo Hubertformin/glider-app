@@ -7,22 +7,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
-import 'package:rentors/config/app_config.dart' as config;
-import 'package:rentors/core/RentorState.dart';
-import 'package:rentors/generated/l10n.dart';
-import 'package:rentors/model/FeatureSubscriptionList.dart';
-import 'package:rentors/model/UserModel.dart';
-import 'package:rentors/model/home/HomeModel.dart';
-import 'package:rentors/model/productdetail/ProductDetailModel.dart';
-import 'package:rentors/util/FeaturePaymentManager.dart';
-import 'package:rentors/util/Utils.dart';
-import 'package:rentors/widget/CircularImageWidget.dart';
-import 'package:rentors/widget/FeatureWidget.dart';
-import 'package:rentors/widget/LikeWidget.dart';
-import 'package:rentors/widget/PlaceHolderWidget.dart';
-import 'package:rentors/widget/ProgressDialog.dart';
-import 'package:rentors/widget/ProgressIndicatorWidget.dart';
-import 'package:rentors/widget/RentorRaisedButton.dart';
+import 'package:glider/config/app_config.dart' as config;
+import 'package:glider/core/glidertate.dart';
+import 'package:glider/generated/l10n.dart';
+import 'package:glider/model/FeatureSubscriptionList.dart';
+import 'package:glider/model/UserModel.dart';
+import 'package:glider/model/home/HomeModel.dart';
+import 'package:glider/model/productdetail/ProductDetailModel.dart';
+import 'package:glider/util/FeaturePaymentManager.dart';
+import 'package:glider/util/Utils.dart';
+import 'package:glider/widget/CircularImageWidget.dart';
+import 'package:glider/widget/FeatureWidget.dart';
+import 'package:glider/widget/LikeWidget.dart';
+import 'package:glider/widget/PlaceHolderWidget.dart';
+import 'package:glider/widget/ProgressDialog.dart';
+import 'package:glider/widget/ProgressIndicatorWidget.dart';
+import 'package:glider/widget/GliderRaisedButton.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 class ProductOverViewWidget extends StatefulWidget {
@@ -70,7 +70,7 @@ class ProductOverViewWidgetState extends State<ProductOverViewWidget> {
     Navigator.of(context)
         .popAndPushNamed("/payment_method", arguments: map)
         .then((value) {
-      RentorState.of(context).update();
+      glidertate.of(context).update();
     });
   }
 
@@ -103,7 +103,7 @@ class ProductOverViewWidgetState extends State<ProductOverViewWidget> {
           Expanded(
             child: Container(
               margin: EdgeInsets.only(left: 5, right: 5),
-              child: RentorRaisedButton(
+              child: GliderRaisedButton(
                 onPressed: () {
                   Navigator.of(context)
                       .pushNamed("/book_product", arguments: widget.mModel);

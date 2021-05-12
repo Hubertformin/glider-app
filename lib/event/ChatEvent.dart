@@ -1,4 +1,4 @@
-import 'package:rentors/event/BaseEvent.dart';
+import 'package:glider/event/BaseEvent.dart';
 
 class ChatEvent extends BaseEvent {
   final String senderId, recieverId, threadId;

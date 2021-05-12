@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
-import 'package:rentors/model/UserModel.dart';
-import 'package:rentors/model/chat/ChatModel.dart';
-import 'package:rentors/model/chat/ConversationModel.dart';
-import 'package:rentors/repo/FreshDio.dart' as dio;
-import 'package:rentors/util/Utils.dart';
+import 'package:glider/model/UserModel.dart';
+import 'package:glider/model/chat/ChatModel.dart';
+import 'package:glider/model/chat/ConversationModel.dart';
+import 'package:glider/repo/FreshDio.dart' as dio;
+import 'package:glider/util/Utils.dart';
 
 Future<ConversationModel> getConversation() async {
   UserModel model = await Utils.getUser();

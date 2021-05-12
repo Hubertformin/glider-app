@@ -1,15 +1,15 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentors/event/BaseEvent.dart';
-import 'package:rentors/event/BookingStatusEvent.dart';
-import 'package:rentors/event/MyBookingEvent.dart';
-import 'package:rentors/event/MyBookingRequestEvent.dart';
-import 'package:rentors/event/MyProductBookingEvent.dart';
-import 'package:rentors/repo/BookingRepo.dart';
-import 'package:rentors/state/BaseState.dart';
-import 'package:rentors/state/DoneState.dart';
-import 'package:rentors/state/MyBookingState.dart';
-import 'package:rentors/state/MyProductBookingState.dart';
-import 'package:rentors/state/OtpState.dart';
+import 'package:glider/event/BaseEvent.dart';
+import 'package:glider/event/BookingStatusEvent.dart';
+import 'package:glider/event/MyBookingEvent.dart';
+import 'package:glider/event/MyBookingRequestEvent.dart';
+import 'package:glider/event/MyProductBookingEvent.dart';
+import 'package:glider/repo/BookingRepo.dart';
+import 'package:glider/state/BaseState.dart';
+import 'package:glider/state/DoneState.dart';
+import 'package:glider/state/MyBookingState.dart';
+import 'package:glider/state/MyProductBookingState.dart';
+import 'package:glider/state/OtpState.dart';
 
 class BookingBloc extends Bloc<BaseEvent, BaseState> {
   @override
