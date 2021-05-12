@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:glider/bloc/SubscriptionBloc.dart';
 import 'package:glider/config/app_config.dart' as config;
 import 'package:glider/core/InheritedStateContainer.dart';
-import 'package:glider/core/glidertate.dart';
+import 'package:glider/core/GliderState.dart';
 import 'package:glider/event/SubscriptionListEvent.dart';
 import 'package:glider/generated/l10n.dart';
 import 'package:glider/model/FeatureSubscriptionList.dart';
@@ -21,7 +21,7 @@ class SubScriptionListScreen extends StatefulWidget {
   }
 }
 
-class SubScriptionListScreenState extends glidertate<SubScriptionListScreen> {
+class SubScriptionListScreenState extends GliderState<SubScriptionListScreen> {
   SubscriptionBloc mBloc;
 
   @override
@@ -106,7 +106,7 @@ class SubScriptionListScreenState extends glidertate<SubScriptionListScreen> {
                                 .popAndPushNamed("/payment_method",
                                     arguments: map)
                                 .then((value) {
-                              glidertate.of(context).update();
+                              GliderState.of(context).update();
                             });
                           },
                           child: Text(

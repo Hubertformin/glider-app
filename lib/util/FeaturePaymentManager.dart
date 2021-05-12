@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:glider/bloc/FeatureBloc.dart';
 import 'package:glider/config/app_config.dart' as config;
-import 'package:glider/core/glidertate.dart';
+import 'package:glider/core/GliderState.dart';
 import 'package:glider/event/FeatureSubscriptionListEvent.dart';
 import 'package:glider/generated/l10n.dart';
 import 'package:glider/model/FeatureSubscriptionList.dart';
@@ -191,7 +191,7 @@ class FeaturePaymentManager {
     Navigator.of(context)
         .popAndPushNamed("/payment_method", arguments: map)
         .then((value) {
-      glidertate.of(context).update();
+      GliderState.of(context).update();
     });
   }
 }

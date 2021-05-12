@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:glider/bloc/ProductDetailsBloc.dart';
 import 'package:glider/config/app_config.dart' as config;
 import 'package:glider/core/InheritedStateContainer.dart';
-import 'package:glider/core/glidertate.dart';
+import 'package:glider/core/GliderState.dart';
 import 'package:glider/event/AllProductEvent.dart';
 import 'package:glider/generated/l10n.dart';
 import 'package:glider/model/home/HomeModel.dart';
@@ -28,7 +28,7 @@ class AllProductListScreen extends StatefulWidget {
   }
 }
 
-class AllProductListScreenState extends glidertate<AllProductListScreen> {
+class AllProductListScreenState extends GliderState<AllProductListScreen> {
   ProductDetailsBloc mBloc = ProductDetailsBloc();
 
   List<FeaturedProductElement> searchItem = List();

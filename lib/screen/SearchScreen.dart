@@ -5,7 +5,7 @@ import 'package:optimized_cached_image/optimized_cached_image.dart';
 import 'package:glider/bloc/SearchBloc.dart';
 import 'package:glider/config/app_config.dart' as config;
 import 'package:glider/core/InheritedStateContainer.dart';
-import 'package:glider/core/glidertate.dart';
+import 'package:glider/core/GliderState.dart';
 import 'package:glider/event/SearchEvent.dart';
 import 'package:glider/generated/l10n.dart';
 import 'package:glider/model/SearchModel.dart';
@@ -25,7 +25,7 @@ class SearchScreen extends StatefulWidget {
   }
 }
 
-class SearchScreenState extends glidertate<SearchScreen> {
+class SearchScreenState extends GliderState<SearchScreen> {
   SearchBloc mBloc;
 
   List<SearchItem> searchItem = List();

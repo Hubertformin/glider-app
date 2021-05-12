@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:optimized_cached_image/optimized_cached_image.dart';
 import 'package:glider/config/app_config.dart' as config;
 import 'package:glider/core/InheritedStateContainer.dart';
-import 'package:glider/core/glidertate.dart';
+import 'package:glider/core/GliderState.dart';
 import 'package:glider/generated/l10n.dart';
 import 'package:glider/model/home/HomeModel.dart';
 import 'package:glider/util/Utils.dart';
@@ -21,7 +21,8 @@ class TopFeatureProductScreen extends StatefulWidget {
   }
 }
 
-class TopFeatureProductScreenState extends glidertate<TopFeatureProductScreen> {
+class TopFeatureProductScreenState
+    extends GliderState<TopFeatureProductScreen> {
   @override
   void initState() {
     super.initState();

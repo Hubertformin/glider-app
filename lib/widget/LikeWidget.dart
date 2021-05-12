@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:glider/bloc/WishBloc.dart';
 import 'package:glider/config/app_config.dart' as config;
-import 'package:glider/core/glidertate.dart';
+import 'package:glider/core/GliderState.dart';
 import 'package:glider/event/LikeEvent.dart';
 import 'package:glider/event/UnLikeEvent.dart';
 import 'package:glider/state/BaseState.dart';
@@ -39,7 +39,7 @@ class LikeWidgetState extends State<LikeWidget> {
           mDialog = null;
         }
         Fluttertoast.showToast(msg: state.home.message);
-        glidertate.of(context).update();
+        GliderState.of(context).update();
       } else if (state is ProgressDialogState) {
         mDialog = ProgressDialog(context);
         mDialog.show();

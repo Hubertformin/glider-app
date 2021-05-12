@@ -10,7 +10,7 @@ import 'package:optimized_cached_image/optimized_cached_image.dart';
 import 'package:glider/bloc/HomeBloc.dart';
 import 'package:glider/config/app_config.dart' as config;
 import 'package:glider/core/InheritedStateContainer.dart';
-import 'package:glider/core/glidertate.dart';
+import 'package:glider/core/GliderState.dart';
 import 'package:glider/event/HomeEvent.dart';
 import 'package:glider/generated/l10n.dart';
 import 'package:glider/model/home/Home.dart';
@@ -35,7 +35,7 @@ class HomeScreenWidget extends StatefulWidget {
   }
 }
 
-class HomeScreenWidgetState extends glidertate<HomeScreenWidget> {
+class HomeScreenWidgetState extends GliderState<HomeScreenWidget> {
   HomeBloc mBloc = new HomeBloc();
 
   Home data;

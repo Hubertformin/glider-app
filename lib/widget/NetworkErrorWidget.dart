@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
 import 'package:glider/config/app_config.dart' as config;
-import 'package:glider/core/glidertate.dart';
+import 'package:glider/core/GliderState.dart';
 import 'package:glider/generated/l10n.dart';
 
 class NetworkWidget extends StatefulWidget {
@@ -48,7 +48,7 @@ class NetworkWidgetState extends State<NetworkWidget> {
                 ),
                 OutlineButton(
                     onPressed: () {
-                      glidertate.of(context).update();
+                      GliderState.of(context).update();
                     },
                     child: Text(
                       S.of(context).retry,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:glider/bloc/UploadPhotoBloc.dart';
-import 'package:glider/core/glidertate.dart';
+import 'package:glider/core/GliderState.dart';
 import 'package:glider/event/UploadPhotoEvent.dart';
 import 'package:glider/generated/l10n.dart';
 import 'package:glider/state/OtpState.dart';
@@ -41,7 +41,7 @@ class UploadPhotoWidgetState extends State<UploadPhotoWidget> {
           dialog.hide();
         }
         widget.imageSelectionCallback(state.home.url, state.typeEnum);
-        glidertate.of(context)?.updateView(state.home.url);
+        GliderState.of(context)?.updateView(state.home.url);
       } else if (state is ProgressDialogState) {
         dialog = ProgressDialog(context, isDismissible: true);
         dialog.style(message: S.of(context).uploading);

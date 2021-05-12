@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:glider/bloc/NotificationBloc.dart';
 import 'package:glider/config/app_config.dart' as config;
 import 'package:glider/core/InheritedStateContainer.dart';
-import 'package:glider/core/glidertate.dart';
+import 'package:glider/core/GliderState.dart';
 import 'package:glider/event/GetNotificationEvent.dart';
 import 'package:glider/generated/l10n.dart';
 import 'package:glider/model/NotificationModel.dart' as notificaton;
@@ -21,7 +21,7 @@ class NotificationScreen extends StatefulWidget {
   }
 }
 
-class NotificationScreenScreenState extends glidertate<NotificationScreen> {
+class NotificationScreenScreenState extends GliderState<NotificationScreen> {
   NotificationBloc mBloc;
 
   @override

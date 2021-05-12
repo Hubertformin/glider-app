@@ -6,7 +6,7 @@ import 'package:optimized_cached_image/optimized_cached_image.dart';
 import 'package:glider/bloc/WishListBloc.dart';
 import 'package:glider/config/app_config.dart' as config;
 import 'package:glider/core/InheritedStateContainer.dart';
-import 'package:glider/core/glidertate.dart';
+import 'package:glider/core/GliderState.dart';
 import 'package:glider/event/WishListEvent.dart';
 import 'package:glider/generated/l10n.dart';
 import 'package:glider/model/wishlist/WishList.dart';
@@ -29,7 +29,7 @@ class WishListScreen extends StatefulWidget {
   }
 }
 
-class WishListScreenState extends glidertate<WishListScreen> {
+class WishListScreenState extends GliderState<WishListScreen> {
   WishListBloc mBloc;
 
   WishList data;

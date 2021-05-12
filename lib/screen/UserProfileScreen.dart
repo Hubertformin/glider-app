@@ -7,7 +7,7 @@ import 'package:glider/bloc/OTPVerifiedBloc.dart';
 import 'package:glider/bloc/UserDetailBloc.dart';
 import 'package:glider/config/app_config.dart' as config;
 import 'package:glider/core/InheritedStateContainer.dart';
-import 'package:glider/core/glidertate.dart';
+import 'package:glider/core/GliderState.dart';
 import 'package:glider/event/SendOTPEvent.dart';
 import 'package:glider/event/UpdateUserDetailEvent.dart';
 import 'package:glider/event/UserDetailEvent.dart';
@@ -32,7 +32,7 @@ class UserProfileScreen extends StatefulWidget {
   }
 }
 
-class UserProfileScreenState extends glidertate<UserProfileScreen> {
+class UserProfileScreenState extends GliderState<UserProfileScreen> {
   TextEditingController nameController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
   TextEditingController addressController = TextEditingController();
